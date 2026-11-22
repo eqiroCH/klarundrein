@@ -69,8 +69,10 @@ export default function Header() {
     closeTimer.current = window.setTimeout(() => setMega(false), 160)
   }
 
-  const solid = scrolled || mega
   const featured = services[0]
+  // Glas-Insel über dem Bild, beim Scrollen verschmelzen die drei Inseln zu einer weissen Leiste
+  const island = scrolled ? 'border-transparent' : 'border-white/15 bg-navy-950/45 backdrop-blur-md'
+  const hover = scrolled ? 'hover:bg-cloud-100' : 'hover:bg-white/10'
 
   return (
     <>
@@ -78,81 +80,81 @@ export default function Header() {
         <div
           ref={megaRef}
           onMouseLeave={closeMegaSoon}
-          className={`relative mx-auto max-w-6xl rounded-[1.75rem] border transition-all duration-300 ${
-            solid
-              ? 'border-cloud-200/80 bg-white/95 text-navy-950 shadow-[0_18px_50px_-20px_rgb(13_27_43/0.35)] backdrop-blur-xl'
-              : 'border-white/15 bg-white/10 text-white backdrop-blur-md'
+          className={`relative mx-auto flex items-center justify-between gap-3 transition-all duration-500 ease-out lg:grid lg:grid-cols-[1fr_auto_1fr] ${
+            scrolled
+              ? 'max-w-5xl rounded-full bg-white/95 p-1.5 text-navy-950 shadow-[0_18px_50px_-20px_rgb(13_27_43/0.4)] ring-1 ring-cloud-200/80 backdrop-blur-xl'
+              : 'max-w-6xl p-0 text-white'
           }`}
         >
           <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-navy-900">
             Zum Inhalt springen
           </a>
-          <div className="flex h-16 items-center justify-between gap-3 pr-2 pl-2 sm:h-[4.5rem] sm:pl-2.5">
-            <Link to="/" aria-label={`${company.brand} – Startseite`} className="flex shrink-0 items-center gap-3">
-              <Logo className="size-12 sm:size-[3.4rem]" />
-              <span className="hidden leading-tight xl:block">
-                <span className="block text-[0.95rem] font-semibold">Klar und Rein</span>
-                <span className={`block text-xs ${solid ? 'text-ink-500' : 'text-white/70'}`}>Reinigung in Adliswil</span>
-              </span>
-            </Link>
 
-            <nav aria-label="Hauptnavigation" className="hidden lg:block">
-              <ul className="flex items-center gap-1">
-                <li onMouseEnter={openMega}>
-                  <button
-                    type="button"
-                    aria-expanded={mega}
-                    aria-controls="mega-menu"
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      toggleMega()
-                    }}
-                    className={`inline-flex items-center gap-1 rounded-full px-4 py-2.5 text-[0.95rem] font-medium transition-colors ${
-                      solid ? 'hover:bg-cloud-100' : 'hover:bg-white/10'
-                    }`}
-                  >
-                    Leistungen
-                    <ChevronDown className={`size-4 transition-transform duration-300 ${mega ? 'rotate-180' : ''}`} aria-hidden />
-                  </button>
+          {/* Insel 1: Logo */}
+          <Link to="/" aria-label={`${company.brand} – Startseite`} className="shrink-0 justify-self-start">
+            <Logo className={`transition-all duration-500 ${scrolled ? 'size-11' : 'size-14 sm:size-16'}`} />
+          </Link>
+
+          {/* Insel 2: Navigation, mittig */}
+          <nav aria-label="Hauptnavigation" className="hidden lg:block">
+            <ul className={`flex items-center gap-0.5 rounded-full border p-1 transition-all duration-500 ${island}`}>
+              <li onMouseEnter={openMega}>
+                <button
+                  type="button"
+                  aria-expanded={mega}
+                  aria-controls="mega-menu"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    toggleMega()
+                  }}
+                  className={`inline-flex items-center gap-1 rounded-full px-4 py-2.5 text-[0.95rem] font-medium transition-colors ${hover} ${
+                    mega ? (scrolled ? 'bg-cloud-100' : 'bg-white/10') : ''
+                  }`}
+                >
+                  Leistungen
+                  <ChevronDown className={`size-4 transition-transform duration-300 ${mega ? 'rotate-180' : ''}`} aria-hidden />
+                </button>
+              </li>
+              {links.map((l) => (
+                <li key={l.to} onMouseEnter={closeMegaSoon}>
+                  <Link to={l.to} className={`block rounded-full px-4 py-2.5 text-[0.95rem] font-medium transition-colors ${hover}`}>
+                    {l.label}
+                  </Link>
                 </li>
-                {links.map((l) => (
-                  <li key={l.to} onMouseEnter={closeMegaSoon}>
-                    <Link
-                      to={l.to}
-                      className={`rounded-full px-4 py-2.5 text-[0.95rem] font-medium transition-colors ${solid ? 'hover:bg-cloud-100' : 'hover:bg-white/10'}`}
-                    >
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+              ))}
+            </ul>
+          </nav>
 
-            <div className="flex items-center gap-2">
-              <a
-                href={phoneHref}
-                aria-label={`Anrufen: ${company.phone}`}
-                className={`grid size-11 place-items-center rounded-full transition-colors xl:flex xl:w-auto xl:gap-2 xl:px-4 ${
-                  solid ? 'hover:bg-cloud-100' : 'hover:bg-white/10'
-                }`}
+          {/* Insel 3: Telefon + Offerte */}
+          <div className="flex items-center justify-end gap-2">
+            <a
+              href={phoneHref}
+              aria-label={`Anrufen: ${company.phone}`}
+              className={`group relative grid size-12 place-items-center rounded-full border transition-all duration-500 ${island} ${
+                scrolled ? 'hover:bg-cloud-100' : 'hover:bg-white hover:text-navy-950'
+              }`}
+            >
+              <Phone className="size-[1.15rem]" aria-hidden />
+              <span
+                aria-hidden
+                className="pointer-events-none absolute top-full right-0 mt-2 hidden rounded-lg bg-navy-950 px-3 py-1.5 text-sm font-medium whitespace-nowrap text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 lg:block"
               >
-                <Phone className="size-[1.1rem]" aria-hidden />
-                <span className="hidden text-[0.95rem] font-medium xl:inline">{company.phone}</span>
-              </a>
-              <Link to={offerTo} className="btn btn-brand hidden !px-5 !py-3 sm:inline-flex">
-                Offerte anfragen
-              </Link>
-              <button
-                type="button"
-                onClick={() => setOpen(true)}
-                aria-expanded={open}
-                aria-controls="mobile-menu"
-                aria-label="Menü öffnen"
-                className={`grid size-11 place-items-center rounded-full lg:hidden ${solid ? 'bg-navy-950 text-white' : 'bg-white text-navy-950'}`}
-              >
-                <Menu className="size-5" aria-hidden />
-              </button>
-            </div>
+                {company.phone}
+              </span>
+            </a>
+            <Link to={offerTo} className="btn btn-brand hidden !px-6 !py-3 sm:inline-flex">
+              Offerte
+            </Link>
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label="Menü öffnen"
+              className={`grid size-12 place-items-center rounded-full lg:hidden ${scrolled ? 'bg-navy-950 text-white' : 'bg-white text-navy-950'}`}
+            >
+              <Menu className="size-5" aria-hidden />
+            </button>
           </div>
 
           {/* Mega-Menü Leistungen */}
