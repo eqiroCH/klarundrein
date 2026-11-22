@@ -1,30 +1,33 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/plus-jakarta-sans';
+@import '@fontsource/poppins/latin-400.css';
+@import '@fontsource/poppins/latin-500.css';
+@import '@fontsource/poppins/latin-600.css';
+@import '@fontsource/poppins/latin-700.css';
 
+/* Farben & Schrift aus der bisherigen klarundrein.ch übernommen (Poppins, Navy, Logo-Blau) */
 @theme {
-  --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink-950: #0b2236;
-  --color-ink-900: #10304a;
-  --color-ink-800: #1a3f5c;
-  --color-ink-700: #34536d;
-  --color-ink-500: #5f7a90;
-  --color-ink-300: #a9bccb;
-  --color-ink-100: #e3ebf1;
+  --color-ink: #1d1e20;
+  --color-ink-700: #3c3f45;
+  --color-ink-500: #56585e;
+  --color-ink-300: #a3a8b1;
 
-  --color-mist-50: #f5f9fb;
-  --color-mist-100: #eaf3f7;
+  --color-navy-950: #0d1b2b;
+  --color-navy-900: #101840;
+  --color-navy-800: #1b2b4f;
 
-  --color-aqua-50: #ebfaf8;
-  --color-aqua-100: #d0f3ee;
-  --color-aqua-200: #a5e8df;
-  --color-aqua-300: #6dd8cb;
-  --color-aqua-400: #34c3b3;
-  --color-aqua-500: #13a898;
-  --color-aqua-600: #0b877b;
-  --color-aqua-700: #0c6b63;
+  --color-brand-50: #eaf4fa;
+  --color-brand-100: #d3e8f5;
+  --color-brand-300: #7cc3ea;
+  --color-brand-400: #3f91c0;
+  --color-brand-500: #0089cc;
+  --color-brand-600: #0077b6;
+  --color-brand-700: #005b99;
 
-  --color-sky-soft: #dff0fb;
+  --color-cloud-50: #f2f3f6;
+  --color-cloud-100: #eceff3;
+  --color-cloud-200: #dde2e8;
 }
 
 @layer base {
@@ -32,22 +35,22 @@
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
     background: #ffffff;
-    color: var(--color-ink-950);
+    color: var(--color-ink);
   }
   body {
-    @apply bg-white font-sans text-ink-950 antialiased;
+    @apply bg-white font-sans text-ink antialiased;
     text-rendering: optimizeLegibility;
   }
   ::selection {
-    background: var(--color-aqua-200);
-    color: var(--color-ink-950);
+    background: var(--color-brand-100);
+    color: var(--color-ink);
   }
   :focus-visible {
-    outline: 2px solid var(--color-aqua-500);
+    outline: 2px solid var(--color-brand-500);
     outline-offset: 3px;
   }
   [id] {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 5.5rem;
   }
 }
 
@@ -56,31 +59,34 @@
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
   }
   .eyebrow {
-    @apply text-xs font-semibold tracking-[0.16em] uppercase;
+    @apply text-[0.8rem] font-semibold tracking-[0.16em] uppercase;
+  }
+  .h-section {
+    @apply text-[2rem] leading-[1.15] font-semibold tracking-tight text-balance sm:text-5xl sm:leading-[1.1];
   }
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[0.95rem] font-semibold whitespace-nowrap transition-all duration-200 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[0.95rem] font-medium whitespace-nowrap transition-all duration-200 active:scale-[0.98];
   }
-  .btn-primary {
-    @apply bg-aqua-500 text-white shadow-[0_8px_24px_-8px_rgb(19_168_152/0.6)] hover:bg-aqua-600;
+  .btn-navy {
+    @apply bg-navy-900 text-white hover:bg-brand-700;
   }
-  .btn-dark {
-    @apply bg-ink-950 text-white hover:bg-ink-800;
+  .btn-brand {
+    @apply bg-brand-500 text-white hover:bg-brand-700;
   }
-  .btn-ghost {
-    @apply border border-ink-100 bg-white text-ink-950 hover:border-ink-300;
+  .btn-light {
+    @apply bg-white text-navy-900 hover:bg-brand-50;
   }
-  .btn-ghost-light {
-    @apply border border-white/20 text-white hover:bg-white/10;
+  .btn-outline-light {
+    @apply border border-white/70 text-white hover:border-white hover:bg-white hover:text-navy-900;
   }
-  .card {
-    @apply rounded-3xl border border-ink-100 bg-white;
+  .btn-outline {
+    @apply border border-cloud-200 bg-white text-navy-900 hover:border-navy-900;
   }
   .prose-legal {
     @apply max-w-3xl space-y-10 text-[1.02rem] leading-relaxed text-ink-700;
   }
   .prose-legal h2 {
-    @apply mb-3 text-xl font-bold text-ink-950;
+    @apply mb-3 text-xl font-semibold text-brand-400;
   }
   .prose-legal p + p {
     @apply mt-3;
@@ -89,15 +95,16 @@
     @apply mt-3 list-disc space-y-1.5 pl-5;
   }
   .prose-legal a {
-    @apply font-medium text-ink-950 underline underline-offset-4;
+    @apply font-medium text-brand-700 underline underline-offset-4;
   }
 }
 
-/* Weiche Farbflächen im Hintergrund */
-.bg-bubbles {
-  background:
-    radial-gradient(40rem 28rem at 85% -10%, var(--color-aqua-100), transparent 60%),
-    radial-gradient(32rem 24rem at -10% 20%, var(--color-sky-soft), transparent 60%), var(--color-mist-50);
+/* Glas-Kacheln im Hero (wie auf der bisherigen Seite) */
+.glass {
+  background: rgb(255 255 255 / 0.1);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .js .reveal {
@@ -111,6 +118,15 @@
   opacity: 1;
   transform: none;
 }
+
+.hero-video {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.hero-video.is-playing {
+  opacity: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -119,23 +135,5 @@
     opacity: 1;
     transform: none;
     transition: none;
-  }
-}
-
-@keyframes float-slow {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-.animate-float {
-  animation: float-slow 6s ease-in-out infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-  .animate-float {
-    animation: none;
   }
 }

@@ -47,12 +47,12 @@ function NotFound() {
   const { pathname } = useLocation()
   useSeo(pathname, notFoundMeta)
   return (
-    <section className="bg-bubbles flex min-h-[80vh] items-center pt-24">
+    <section className="flex min-h-[80vh] items-center bg-navy-950 pt-28 pb-16 text-white">
       <div className="container-x">
-        <p className="eyebrow text-aqua-600">Fehler 404</p>
-        <h1 className="mt-4 text-5xl font-extrabold tracking-tight sm:text-7xl">Hier ist nichts – nicht mal Staub.</h1>
-        <p className="mt-6 max-w-lg text-lg text-ink-700">Die gesuchte Seite existiert nicht oder wurde verschoben.</p>
-        <Link to="/" className="btn btn-primary mt-10">Zur Startseite</Link>
+        <p className="eyebrow text-brand-300">Fehler 404</p>
+        <h1 className="mt-4 text-5xl font-semibold tracking-tight sm:text-7xl">Hier ist nichts – nicht mal Staub.</h1>
+        <p className="mt-6 max-w-lg text-lg text-white/80">Die gesuchte Seite existiert nicht oder wurde verschoben.</p>
+        <Link to="/" className="btn btn-light mt-10">Zur Startseite</Link>
       </div>
     </section>
   )

@@ -6,10 +6,10 @@ function LegalLayout({ title, path, children }: { title: string; path: string; c
   useSeo(path)
   return (
     <>
-      <section className="bg-bubbles pt-32 pb-14 sm:pt-40">
+      <section className="bg-navy-950 pt-36 pb-14 text-white sm:pt-44 sm:pb-16">
         <div className="container-x">
-          <p className="eyebrow text-aqua-600">Rechtliches</p>
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-6xl">{title}</h1>
+          <p className="eyebrow text-brand-300">Rechtliches</p>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-6xl">{title}</h1>
         </div>
       </section>
       <section className="py-16 sm:py-20">

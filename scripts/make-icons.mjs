@@ -1,26 +1,47 @@
-// Erzeugt favicon-32.png, apple-touch-icon.png, logo-512.png und og-image.png aus SVG. Aufruf: npm run og
+// Erzeugt Logo-Varianten, Favicons und das OG-Bild aus dem Original-Logo (design/logo-original.png)
+// und dem Hero-Standbild (public/images/hero.webp). Aufruf: npm run og
 import sharp from 'sharp'
-import { readFile } from 'node:fs/promises'
 
-const fav = await readFile('public/favicon.svg')
-await sharp(fav, { density: 300 }).resize(32, 32).png().toFile('public/favicon-32.png')
-await sharp(fav, { density: 600 }).resize(180, 180).flatten({ background: '#13a898' }).png().toFile('public/apple-touch-icon.png')
-await sharp(fav, { density: 1200 }).resize(512, 512).png().toFile('public/logo-512.png')
+const SRC = 'design/logo-original.png'
+const white = { r: 255, g: 255, b: 255, alpha: 1 }
 
-const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <radialGradient id="a" cx="85%" cy="0%" r="70%"><stop offset="0" stop-color="#d0f3ee"/><stop offset="1" stop-color="#f5f9fb" stop-opacity="0"/></radialGradient>
-  </defs>
-  <rect width="1200" height="630" fill="#f5f9fb"/>
-  <rect width="1200" height="630" fill="url(#a)"/>
-  <g transform="translate(80 80) scale(2)">
-    <rect width="40" height="40" rx="12" fill="#13a898"/>
-    <path d="M20 8.5c4.6 6 7.6 10.3 7.6 14.4a7.6 7.6 0 0 1-15.2 0c0-4.1 3-8.4 7.6-14.4Z" fill="#fff"/>
-  </g>
-  <text x="180" y="132" font-family="DejaVu Sans, Arial, sans-serif" font-size="38" font-weight="700" fill="#0b2236">Klar <tspan fill="#13a898">und</tspan> Rein</text>
-  <text x="80" y="330" font-family="DejaVu Sans, Arial, sans-serif" font-size="74" font-weight="800" fill="#0b2236">Reinigungsfirma</text>
-  <text x="80" y="420" font-family="DejaVu Sans, Arial, sans-serif" font-size="74" font-weight="800" fill="#13a898">in Adliswil</text>
-  <text x="80" y="520" font-family="DejaVu Sans, Arial, sans-serif" font-size="32" fill="#34536d">Umzugsreinigung mit Abnahmegarantie · Wohnung · Büro · Treppenhaus · Bau</text>
+// Logo: Weissraum wegschneiden, quadratisch mit etwas Rand
+const trimmed = await sharp(SRC).trim({ threshold: 12 }).toBuffer()
+const square = (size, pad) =>
+  sharp(trimmed)
+    .resize(size - pad * 2, size - pad * 2, { fit: 'contain', background: white })
+    .extend({ top: pad, bottom: pad, left: pad, right: pad, background: white })
+await square(256, 10).webp({ quality: 90 }).toFile('public/logo-256.webp')
+await square(512, 24).png().toFile('public/logo-512.png')
+
+// Favicon: nur das Haus-Signet (ohne Schriftzug)
+const icon = await sharp(SRC).extract({ left: 150, top: 105, width: 700, height: 560 }).toBuffer()
+const fav = (size, pad) =>
+  sharp(icon)
+    .resize(size - pad * 2, size - pad * 2, { fit: 'contain', background: white })
+    .extend({ top: pad, bottom: pad, left: pad, right: pad, background: white })
+await fav(32, 1).png().toFile('public/favicon-32.png')
+await fav(192, 12).png().toFile('public/favicon-192.png')
+await fav(180, 16).png().toFile('public/apple-touch-icon.png')
+
+// OG-Bild 1200×630: Hero-Standbild abgedunkelt, Logo-Kachel, Slogan
+const bg = await sharp('public/images/hero.webp').resize(1200, 630, { fit: 'cover' }).toBuffer()
+const logoTile = await square(150, 8).png().toBuffer()
+const overlay = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#0d1b2b" stop-opacity=".92"/><stop offset="1" stop-color="#0d1b2b" stop-opacity=".55"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="72" y="72" width="166" height="166" rx="18" fill="#fff"/>
+  <text x="72" y="345" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#7cc3ea" letter-spacing="3">REINIGUNGSFIRMA IN ADLISWIL</text>
+  <text x="72" y="430" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#fff">Sauberkeit schafft</text>
+  <text x="72" y="510" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#fff">Vertrauen.</text>
+  <text x="72" y="572" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="26" fill="#cfd8e3">Umzugsreinigung mit Abnahmegarantie · Wohnung · Büro · Treppenhaus · Bau</text>
 </svg>`
-await sharp(Buffer.from(og)).png().toFile('public/og-image.png')
-console.log('✓ Icons & OG-Bild erzeugt')
+await sharp(bg)
+  .composite([
+    { input: Buffer.from(overlay), top: 0, left: 0 },
+    { input: logoTile, top: 80, left: 80 },
+  ])
+  .png()
+  .toFile('public/og-image.png')
+
+console.log('✓ Logo, Favicons & OG-Bild erzeugt')

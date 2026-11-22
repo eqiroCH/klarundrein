@@ -47,8 +47,13 @@ export type Faq = { q: string; a: string }
 export type Service = {
   slug: string
   name: string
+  /** Kartentitel wie auf der bisherigen Website */
+  cardTitle: string
+  /** Kartentext wie auf der bisherigen Website */
   short: string
-  icon: 'truck' | 'home' | 'building' | 'stairs' | 'hammer'
+  /** Bild in /public/images: <image>.webp (Karte) und <image>-wide(-sm).webp (Seitenkopf) */
+  image: string
+  imageAlt: string
   metaTitle: string
   metaDescription: string
   h1: string
@@ -64,8 +69,10 @@ export const services: Service[] = [
   {
     slug: 'umzugsreinigung-adliswil',
     name: 'Umzugsreinigung',
-    short: 'End- und Umzugsreinigung für eine problemlose Wohnungsübergabe – mit Abnahmegarantie.',
-    icon: 'truck',
+    cardTitle: 'Umzugsreinigung',
+    short: 'Für eine ordentliche und problemlose Wohnungsübergabe. Sorgfältige Reinigung mit Abnahmegarantie.',
+    image: 'umzug',
+    imageAlt: 'Frau packt beim Umzug Kartons in einer hellen Wohnung',
     metaTitle: 'Umzugsreinigung Adliswil mit Abnahmegarantie | Klar und Rein',
     metaDescription:
       'Umzugs- und Endreinigung in Adliswil, Langnau, Kilchberg, Thalwil und Zürich – gründlich und mit Abnahmegarantie. Jetzt kostenlose Offerte anfragen.',
@@ -109,8 +116,10 @@ export const services: Service[] = [
   {
     slug: 'wohnungsreinigung-adliswil',
     name: 'Wohnungsreinigung',
-    short: 'Regelmässige oder einmalige Reinigung Ihrer Wohnung – auch als gründliche Tiefenreinigung.',
-    icon: 'home',
+    cardTitle: 'Wohnungsreinigung',
+    short: 'Ob regelmässig oder nach Bedarf. Wir reinigen Ihre Wohnung gründlich und sorgfältig, damit Sie sich wohlfühlen können.',
+    image: 'wohnung',
+    imageAlt: 'Reinigungskraft wischt den Boden einer hellen Wohnung',
     metaTitle: 'Wohnungsreinigung Adliswil – regelmässig oder einmalig | Klar und Rein',
     metaDescription:
       'Wohnungsreinigung und Tiefenreinigung in Adliswil und Umgebung. Regelmässig oder einmalig, gründlich und zuverlässig. Kostenlose Offerte anfragen.',
@@ -148,8 +157,10 @@ export const services: Service[] = [
   {
     slug: 'bueroreinigung-adliswil',
     name: 'Büroreinigung',
-    short: 'Saubere Büros, Praxen und Geschäftsräume – regelmässig und nach Ihren Zeiten.',
-    icon: 'building',
+    cardTitle: 'Büroreinigungen',
+    short: 'Wir sorgen für saubere Büroräume und passen uns Ihren Terminwünschen an.',
+    image: 'buero',
+    imageAlt: 'Sauberes Sitzungszimmer mit Holztisch und Bürostühlen',
     metaTitle: 'Büroreinigung Adliswil – Unterhaltsreinigung für Firmen | Klar und Rein',
     metaDescription:
       'Büroreinigung und Unterhaltsreinigung für Büros, Praxen und Geschäftsräume in Adliswil und Umgebung. Flexibel, auch ausserhalb der Bürozeiten.',
@@ -187,8 +198,10 @@ export const services: Service[] = [
   {
     slug: 'treppenhausreinigung-adliswil',
     name: 'Treppenhausreinigung',
-    short: 'Gepflegte Treppenhäuser und Eingangsbereiche für Liegenschaften und Verwaltungen.',
-    icon: 'stairs',
+    cardTitle: 'Treppenhausreinigungen',
+    short: 'Ein sauberes Treppenhaus hinterlässt einen positiven Eindruck. Böden, Geländer und Eingangsbereiche werden zuverlässig gereinigt.',
+    image: 'treppenhaus',
+    imageAlt: 'Helles, sauberes Treppenhaus mit Geländer',
     metaTitle: 'Treppenhausreinigung Adliswil für Liegenschaften | Klar und Rein',
     metaDescription:
       'Treppenhausreinigung für Mehrfamilienhäuser, Verwaltungen und Eigentümergemeinschaften in Adliswil und Umgebung. Regelmässig und zuverlässig.',
@@ -222,8 +235,10 @@ export const services: Service[] = [
   {
     slug: 'baureinigung-adliswil',
     name: 'Baureinigung',
-    short: 'Reinigung nach Bauarbeiten und Renovationen – bezugsbereit bis ins Detail.',
-    icon: 'hammer',
+    cardTitle: 'Baureinigungen',
+    short: 'Reinigung nach Bauarbeiten und Renovationen für einen einwandfreien Zustand.',
+    image: 'bau',
+    imageAlt: 'Reinigungsfachmann mit Drucksprüher nach Bauarbeiten',
     metaTitle: 'Baureinigung Adliswil – nach Bau und Renovation | Klar und Rein',
     metaDescription:
       'Bau- und Bauendreinigung nach Neubau, Umbau oder Renovation in Adliswil und im Kanton Zürich. Staub, Farb- und Kleberreste weg – bezugsbereit.',
@@ -281,6 +296,48 @@ export const generalFaqs: Faq[] = [
     q: 'Reinigen Sie auch regelmässig für Firmen und Verwaltungen?',
     a: 'Ja. Neben Umzugs- und Wohnungsreinigungen übernehmen wir die regelmässige Unterhaltsreinigung von Büros, Praxen und Treppenhäusern.',
   },
+]
+
+/** Reihenfolge der Leistungskarten wie auf der bisherigen Website */
+export const homeOrder = [
+  'treppenhausreinigung-adliswil',
+  'bueroreinigung-adliswil',
+  'wohnungsreinigung-adliswil',
+  'umzugsreinigung-adliswil',
+  'baureinigung-adliswil',
+]
+
+/** Glas-Kacheln im Hero (Texte der bisherigen Website) */
+export const heroCards = [
+  {
+    title: 'Reinigungsdienste für Privathaushalte',
+    text: 'Gründliche Reinigung für ein makelloses Wohnumfeld.',
+    to: '/wohnungsreinigung-adliswil',
+  },
+  {
+    title: 'Unterhaltsreinigung für Büros und Treppenhäuser',
+    text: 'Sauberkeit und Ordnung für Büros und Treppenhäuser, auf die Sie sich verlassen können.',
+    to: '/bueroreinigung-adliswil',
+  },
+  {
+    title: 'Tiefenreinigung',
+    text: 'Spezialisierte Tiefenreinigung für Ihre individuellen Anforderungen.',
+    to: '/wohnungsreinigung-adliswil',
+  },
+]
+
+/** Kennzahlen der bisherigen Website. TODO: Bedeutung von Esma bestätigen lassen */
+export const stats = [
+  { value: '120+', label: 'Qualitätsdienstleistungen' },
+  { value: '15', label: 'Von vielen vertraut' },
+]
+
+/** Versprechen (ersetzt die Vorlagen-Bewertungen der alten Seite, bis echte Google-Bewertungen da sind) */
+export const promises = [
+  { title: 'Abnahmegarantie', text: 'Bei der Umzugsreinigung reinigen wir kostenlos nach, falls die Verwaltung etwas beanstandet.' },
+  { title: 'Pünktlich & zuverlässig', text: 'Wir kommen zum vereinbarten Termin und halten uns an klare Absprachen.' },
+  { title: 'Alles inklusive', text: 'Reinigungsmittel, Geräte und Material bringen wir mit. Sie müssen nichts vorbereiten.' },
+  { title: 'Kostenlose Offerte', text: 'Sie wissen vorher genau, was die Reinigung kostet – transparent und unverbindlich.' },
 ]
 
 export const steps = [
