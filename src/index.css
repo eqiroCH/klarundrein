@@ -78,6 +78,12 @@
   [id] {
     scroll-margin-top: 6.5rem;
   }
+  /* Sicherheitsnetz: lange Wörter nie über den Rand laufen lassen */
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: break-word;
+  }
 }
 
 @layer components {

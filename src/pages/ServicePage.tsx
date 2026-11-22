@@ -8,7 +8,7 @@ import Process from '../components/Process'
 import AreaBand from '../components/AreaBand'
 import ServiceTile from '../components/ServiceTile'
 import { Eyebrow, Sparkle } from '../components/Icons'
-import { areas, company, phoneHref, services, type Service } from '../data/site'
+import { areas, company, phoneHref, services, soft, type Service } from '../data/site'
 import { useSeo } from '../seo'
 
 export default function ServicePage({ service: s }: { service: Service }) {
@@ -75,7 +75,7 @@ export default function ServicePage({ service: s }: { service: Service }) {
                 <Sparkle className="size-3.5 text-brand-300" /> {s.teaser}
               </p>
               <h1 className="mt-6 animate-fade-up text-[2.4rem] leading-[1.06] font-semibold tracking-tight text-balance [animation-delay:80ms] sm:text-6xl">
-                {s.h1}
+                {soft(s.h1)}
               </h1>
               <p className="mt-6 max-w-2xl animate-fade-up text-lg leading-relaxed text-white/80 [animation-delay:160ms] sm:text-xl">{s.lead}</p>
               <div className="mt-9 flex animate-fade-up flex-col gap-3 [animation-delay:240ms] sm:flex-row">

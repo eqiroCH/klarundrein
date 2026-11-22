@@ -1,7 +1,7 @@
 import { CalendarCheck, ClipboardList, MessageSquareText, SprayCan } from 'lucide-react'
 import Reveal from './Reveal'
 import { Eyebrow } from './Icons'
-import { steps } from '../data/site'
+import { soft, steps } from '../data/site'
 
 const icons = [MessageSquareText, ClipboardList, SprayCan, CalendarCheck]
 
@@ -12,7 +12,7 @@ export default function Process({ title = 'In vier Schritten zur sauberen Wohnun
       <div className="container-x">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow>So einfach geht's</Eyebrow>
-          <h2 className="h-section mt-4 text-navy-950">{title}</h2>
+          <h2 className="h-section mt-4 text-navy-950">{soft(title)}</h2>
         </Reveal>
         <ol className="relative mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           <span aria-hidden className="absolute top-8 right-[12.5%] left-[12.5%] hidden border-t-2 border-dashed border-brand-200 lg:block" />

@@ -2,7 +2,7 @@ import { MessageCircle, Phone, Plus } from 'lucide-react'
 import JsonLd from './JsonLd'
 import Reveal from './Reveal'
 import { Eyebrow } from './Icons'
-import { company, phoneHref, whatsappHref, type Faq } from '../data/site'
+import { company, phoneHref, soft, whatsappHref, type Faq } from '../data/site'
 
 /** FAQ als aufklappbare Karten + FAQPage-Schema (für Google & KI-Antworten). */
 export default function FaqList({ faqs, withSchema = true }: { faqs: Faq[]; withSchema?: boolean }) {
@@ -44,7 +44,7 @@ export function FaqSection({ title, faqs }: { title: string; faqs: Faq[] }) {
       <div className="container-x grid gap-12 lg:grid-cols-12">
         <Reveal className="self-start lg:sticky lg:top-32 lg:col-span-4">
           <Eyebrow>Häufige Fragen</Eyebrow>
-          <h2 className="h-section mt-4 text-navy-950">{title}</h2>
+          <h2 className="mt-4 text-[2.1rem] leading-[1.12] font-semibold tracking-tight text-balance text-navy-950 sm:text-[2.6rem]">{soft(title)}</h2>
           <p className="lead mt-5 text-ink-700">Ihre Frage ist nicht dabei? Wir beraten Sie gerne persönlich.</p>
           <div className="mt-8 rounded-3xl bg-navy-950 p-6 text-white">
             <p className="font-semibold">Direkt mit uns sprechen</p>

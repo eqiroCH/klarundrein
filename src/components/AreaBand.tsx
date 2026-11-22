@@ -1,7 +1,7 @@
 import { MapPin } from 'lucide-react'
 import Reveal from './Reveal'
 import { Eyebrow } from './Icons'
-import { areas, company } from '../data/site'
+import { areas, company, soft } from '../data/site'
 
 /** Einzugsgebiet mit Ring-Grafik rund um Adliswil. */
 export default function AreaBand({ service }: { service?: string }) {
@@ -17,7 +17,7 @@ export default function AreaBand({ service }: { service?: string }) {
               </span>
               <Eyebrow className="mt-6 text-brand-600">Einzugsgebiet</Eyebrow>
               <h2 className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-balance text-navy-950 sm:text-4xl">
-                {service ? `${service} in Adliswil und Umgebung` : 'Von Adliswil aus schnell bei Ihnen'}
+                {service ? `${soft(service)} in Adliswil und Umgebung` : 'Von Adliswil aus schnell bei Ihnen'}
               </h2>
               <p className="lead mt-4 text-ink-700">
                 Unser Sitz ist an der {company.street} in {company.city}. Wir reinigen in den Nachbargemeinden, in der Stadt
