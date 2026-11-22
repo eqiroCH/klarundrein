@@ -70,9 +70,17 @@ export default function Header() {
   }
 
   const featured = services[0]
-  // Glas-Insel über dem Bild, beim Scrollen verschmelzen die drei Inseln zu einer weissen Leiste
-  const island = scrolled ? 'border-transparent' : 'border-white/15 bg-navy-950/45 backdrop-blur-md'
+  // Übergang Inseln → Leiste: nur Transparenz und Skalierung animieren, das Layout bleibt fix (kein Springen)
+  const ease = 'duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]'
   const hover = scrolled ? 'hover:bg-cloud-100' : 'hover:bg-white/10'
+  const glass = (extra = '') => (
+    <span
+      aria-hidden
+      className={`absolute inset-0 -z-10 rounded-full border border-white/15 bg-navy-950/45 backdrop-blur-md transition-[opacity,background-color,border-color] ${ease} ${
+        scrolled ? 'opacity-0' : 'opacity-100'
+      } ${extra}`}
+    />
+  )
 
   return (
     <>
@@ -80,24 +88,30 @@ export default function Header() {
         <div
           ref={megaRef}
           onMouseLeave={closeMegaSoon}
-          className={`relative mx-auto flex items-center justify-between gap-3 transition-all duration-500 ease-out lg:grid lg:grid-cols-[1fr_auto_1fr] ${
-            scrolled
-              ? 'max-w-5xl rounded-full bg-white/95 p-1.5 text-navy-950 shadow-[0_18px_50px_-20px_rgb(13_27_43/0.4)] ring-1 ring-cloud-200/80 backdrop-blur-xl'
-              : 'max-w-6xl p-0 text-white'
+          className={`relative isolate mx-auto flex max-w-6xl items-center justify-between gap-3 p-1.5 transition-colors ${ease} lg:grid lg:grid-cols-[1fr_auto_1fr] ${
+            scrolled ? 'text-navy-950' : 'text-white'
           }`}
         >
+          {/* Hintergrund der kompakten Leiste */}
+          <span
+            aria-hidden
+            className={`absolute inset-0 -z-10 rounded-full bg-white/95 shadow-[0_18px_50px_-20px_rgb(13_27_43/0.4)] ring-1 ring-cloud-200/80 backdrop-blur-xl transition-[opacity,transform] ${ease} ${
+              scrolled ? 'scale-100 opacity-100' : 'scale-[0.97] opacity-0'
+            }`}
+          />
           <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-navy-900">
             Zum Inhalt springen
           </a>
 
           {/* Insel 1: Logo */}
           <Link to="/" aria-label={`${company.brand} – Startseite`} className="shrink-0 justify-self-start">
-            <Logo className={`transition-all duration-500 ${scrolled ? 'size-11' : 'size-14 sm:size-16'}`} />
+            <Logo className={`size-[3.25rem] origin-left transition-transform ${ease} ${scrolled ? 'scale-100' : 'scale-[1.18]'}`} />
           </Link>
 
           {/* Insel 2: Navigation, mittig */}
           <nav aria-label="Hauptnavigation" className="hidden lg:block">
-            <ul className={`flex items-center gap-0.5 rounded-full border p-1 transition-all duration-500 ${island}`}>
+            <ul className="relative isolate flex items-center gap-0.5 rounded-full p-1">
+              {glass()}
               <li onMouseEnter={openMega}>
                 <button
                   type="button"
@@ -107,7 +121,7 @@ export default function Header() {
                     e.stopPropagation()
                     toggleMega()
                   }}
-                  className={`inline-flex items-center gap-1 rounded-full px-4 py-2.5 text-[0.95rem] font-medium transition-colors ${hover} ${
+                  className={`inline-flex items-center gap-1 rounded-full px-4 py-2.5 text-[0.95rem] font-medium transition-[background-color] ${hover} ${
                     mega ? (scrolled ? 'bg-cloud-100' : 'bg-white/10') : ''
                   }`}
                 >
@@ -117,7 +131,7 @@ export default function Header() {
               </li>
               {links.map((l) => (
                 <li key={l.to} onMouseEnter={closeMegaSoon}>
-                  <Link to={l.to} className={`block rounded-full px-4 py-2.5 text-[0.95rem] font-medium transition-colors ${hover}`}>
+                  <Link to={l.to} className={`block rounded-full px-4 py-2.5 text-[0.95rem] font-medium transition-[background-color] ${hover}`}>
                     {l.label}
                   </Link>
                 </li>
@@ -130,10 +144,11 @@ export default function Header() {
             <a
               href={phoneHref}
               aria-label={`Anrufen: ${company.phone}`}
-              className={`group relative grid size-12 place-items-center rounded-full border transition-all duration-500 ${island} ${
-                scrolled ? 'hover:bg-cloud-100' : 'hover:bg-white hover:text-navy-950'
+              className={`group relative isolate grid size-12 place-items-center rounded-full transition-[background-color] ${
+                scrolled ? 'hover:bg-cloud-100' : 'hover:text-navy-950'
               }`}
             >
+              {glass('group-hover:border-white group-hover:bg-white')}
               <Phone className="size-[1.15rem]" aria-hidden />
               <span
                 aria-hidden
@@ -151,7 +166,9 @@ export default function Header() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label="Menü öffnen"
-              className={`grid size-12 place-items-center rounded-full lg:hidden ${scrolled ? 'bg-navy-950 text-white' : 'bg-white text-navy-950'}`}
+              className={`grid size-12 place-items-center rounded-full transition-colors ${ease} lg:hidden ${
+                scrolled ? 'bg-navy-950 text-white' : 'bg-white text-navy-950'
+              }`}
             >
               <Menu className="size-5" aria-hidden />
             </button>
