@@ -49,6 +49,8 @@ export type Service = {
   name: string
   /** Kartentitel wie auf der bisherigen Website */
   cardTitle: string
+  /** Kurzzeile fürs Menü */
+  teaser: string
   /** Kartentext wie auf der bisherigen Website */
   short: string
   /** Bild in /public/images: <image>.webp (Karte) und <image>-wide(-sm).webp (Seitenkopf) */
@@ -70,6 +72,7 @@ export const services: Service[] = [
     slug: 'umzugsreinigung-adliswil',
     name: 'Umzugsreinigung',
     cardTitle: 'Umzugsreinigung',
+    teaser: 'Endreinigung mit Abnahmegarantie',
     short: 'Für eine ordentliche und problemlose Wohnungsübergabe. Sorgfältige Reinigung mit Abnahmegarantie.',
     image: 'umzug',
     imageAlt: 'Frau packt beim Umzug Kartons in einer hellen Wohnung',
@@ -117,6 +120,7 @@ export const services: Service[] = [
     slug: 'wohnungsreinigung-adliswil',
     name: 'Wohnungsreinigung',
     cardTitle: 'Wohnungsreinigung',
+    teaser: 'Regelmässig oder als Tiefenreinigung',
     short: 'Ob regelmässig oder nach Bedarf. Wir reinigen Ihre Wohnung gründlich und sorgfältig, damit Sie sich wohlfühlen können.',
     image: 'wohnung',
     imageAlt: 'Reinigungskraft wischt den Boden einer hellen Wohnung',
@@ -158,6 +162,7 @@ export const services: Service[] = [
     slug: 'bueroreinigung-adliswil',
     name: 'Büroreinigung',
     cardTitle: 'Büroreinigungen',
+    teaser: 'Unterhaltsreinigung nach Ihren Zeiten',
     short: 'Wir sorgen für saubere Büroräume und passen uns Ihren Terminwünschen an.',
     image: 'buero',
     imageAlt: 'Sauberes Sitzungszimmer mit Holztisch und Bürostühlen',
@@ -199,6 +204,7 @@ export const services: Service[] = [
     slug: 'treppenhausreinigung-adliswil',
     name: 'Treppenhausreinigung',
     cardTitle: 'Treppenhausreinigungen',
+    teaser: 'Für Liegenschaften und Verwaltungen',
     short: 'Ein sauberes Treppenhaus hinterlässt einen positiven Eindruck. Böden, Geländer und Eingangsbereiche werden zuverlässig gereinigt.',
     image: 'treppenhaus',
     imageAlt: 'Helles, sauberes Treppenhaus mit Geländer',
@@ -236,6 +242,7 @@ export const services: Service[] = [
     slug: 'baureinigung-adliswil',
     name: 'Baureinigung',
     cardTitle: 'Baureinigungen',
+    teaser: 'Nach Neubau, Umbau und Renovation',
     short: 'Reinigung nach Bauarbeiten und Renovationen für einen einwandfreien Zustand.',
     image: 'bau',
     imageAlt: 'Reinigungsfachmann mit Drucksprüher nach Bauarbeiten',
@@ -298,15 +305,6 @@ export const generalFaqs: Faq[] = [
   },
 ]
 
-/** Reihenfolge der Leistungskarten wie auf der bisherigen Website */
-export const homeOrder = [
-  'treppenhausreinigung-adliswil',
-  'bueroreinigung-adliswil',
-  'wohnungsreinigung-adliswil',
-  'umzugsreinigung-adliswil',
-  'baureinigung-adliswil',
-]
-
 /** Glas-Kacheln im Hero (Texte der bisherigen Website) */
 export const heroCards = [
   {
@@ -346,3 +344,6 @@ export const steps = [
   { title: 'Reinigung', text: 'Wir kommen pünktlich zum vereinbarten Termin und bringen alles Nötige mit.' },
   { title: 'Abnahme', text: 'Sie prüfen das Ergebnis. Bei der Umzugsreinigung gilt unsere Abnahmegarantie.' },
 ]
+
+/** Weiche Trennstelle vor «reinigung», damit lange Wörter auf kleinen Kacheln sauber umbrechen */
+export const soft = (word: string) => word.replace(/(.)(reinigung)/, '$1­$2')

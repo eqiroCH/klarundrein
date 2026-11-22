@@ -4,30 +4,56 @@
 @import '@fontsource/poppins/latin-600.css';
 @import '@fontsource/poppins/latin-700.css';
 
-/* Farben & Schrift aus der bisherigen klarundrein.ch übernommen (Poppins, Navy, Logo-Blau) */
+/* Farben & Schrift aus der bisherigen klarundrein.ch (Poppins, Navy, Logo-Blau) */
 @theme {
   --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #1d1e20;
-  --color-ink-700: #3c3f45;
-  --color-ink-500: #56585e;
-  --color-ink-300: #a3a8b1;
+  --color-ink: #16202c;
+  --color-ink-700: #3b4552;
+  --color-ink-500: #5b6573;
+  --color-ink-300: #a3abb7;
 
   --color-navy-950: #0d1b2b;
   --color-navy-900: #101840;
-  --color-navy-800: #1b2b4f;
+  --color-navy-800: #17283d;
 
-  --color-brand-50: #eaf4fa;
-  --color-brand-100: #d3e8f5;
+  --color-brand-50: #eef6fb;
+  --color-brand-100: #d6eaf6;
+  --color-brand-200: #b2d8f0;
   --color-brand-300: #7cc3ea;
   --color-brand-400: #3f91c0;
   --color-brand-500: #0089cc;
   --color-brand-600: #0077b6;
   --color-brand-700: #005b99;
 
-  --color-cloud-50: #f2f3f6;
+  --color-cloud-50: #f5f7fa;
   --color-cloud-100: #eceff3;
   --color-cloud-200: #dde2e8;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-menu-in: menu-in 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+}
+
+:root {
+  interpolate-size: allow-keywords;
 }
 
 @layer base {
@@ -50,7 +76,7 @@
     outline-offset: 3px;
   }
   [id] {
-    scroll-margin-top: 5.5rem;
+    scroll-margin-top: 6.5rem;
   }
 }
 
@@ -59,25 +85,28 @@
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
   }
   .eyebrow {
-    @apply text-[0.8rem] font-semibold tracking-[0.16em] uppercase;
+    @apply inline-flex items-center gap-2 text-[0.78rem] font-semibold tracking-[0.18em] uppercase;
   }
   .h-section {
-    @apply text-[2rem] leading-[1.15] font-semibold tracking-tight text-balance sm:text-5xl sm:leading-[1.1];
+    @apply text-[2.1rem] leading-[1.12] font-semibold tracking-tight text-balance sm:text-5xl sm:leading-[1.08];
+  }
+  .lead {
+    @apply text-lg leading-relaxed;
   }
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[0.95rem] font-medium whitespace-nowrap transition-all duration-200 active:scale-[0.98];
   }
+  .btn-brand {
+    @apply bg-brand-500 text-white shadow-[0_12px_30px_-12px_rgb(0_137_204/0.8)] hover:bg-brand-600;
+  }
   .btn-navy {
     @apply bg-navy-900 text-white hover:bg-brand-700;
-  }
-  .btn-brand {
-    @apply bg-brand-500 text-white hover:bg-brand-700;
   }
   .btn-light {
     @apply bg-white text-navy-900 hover:bg-brand-50;
   }
-  .btn-outline-light {
-    @apply border border-white/70 text-white hover:border-white hover:bg-white hover:text-navy-900;
+  .btn-glass {
+    @apply border border-white/25 bg-white/10 text-white backdrop-blur-md hover:bg-white hover:text-navy-900;
   }
   .btn-outline {
     @apply border border-cloud-200 bg-white text-navy-900 hover:border-navy-900;
@@ -86,7 +115,7 @@
     @apply max-w-3xl space-y-10 text-[1.02rem] leading-relaxed text-ink-700;
   }
   .prose-legal h2 {
-    @apply mb-3 text-xl font-semibold text-brand-400;
+    @apply mb-3 text-xl font-semibold text-navy-950;
   }
   .prose-legal p + p {
     @apply mt-3;
@@ -99,20 +128,50 @@
   }
 }
 
-/* Glas-Kacheln im Hero (wie auf der bisherigen Seite) */
+/* Glas-Flächen (wie die Kacheln der bisherigen Website) */
 .glass {
-  background: rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.08);
   border: 1px solid rgb(255 255 255 / 0.14);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #7cc3ea 0%, #ffffff 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Feines Punkteraster für dunkle Flächen */
+.dots {
+  background-image: radial-gradient(rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Konzentrische Ringe (Einzugsgebiet) */
+.rings {
+  background: repeating-radial-gradient(circle at center, transparent 0 46px, rgb(0 137 204 / 0.14) 46px 47px);
+}
+
+/* Weich aufklappende FAQ (Progressive Enhancement) */
+details.faq::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition:
+    block-size 0.35s ease,
+    content-visibility 0.35s allow-discrete;
+}
+details.faq[open]::details-content {
+  block-size: auto;
 }
 
 .js .reveal {
   opacity: 0;
-  transform: translateY(14px);
+  transform: translateY(18px);
   transition:
-    opacity 0.7s ease,
-    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .js .reveal.is-visible {
   opacity: 1;
@@ -135,5 +194,8 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .animate-marquee {
+    animation: none;
   }
 }

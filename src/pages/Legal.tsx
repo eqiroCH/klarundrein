@@ -6,7 +6,8 @@ function LegalLayout({ title, path, children }: { title: string; path: string; c
   useSeo(path)
   return (
     <>
-      <section className="bg-navy-950 pt-36 pb-14 text-white sm:pt-44 sm:pb-16">
+      <section className="relative isolate overflow-hidden bg-navy-950 pt-36 pb-14 text-white sm:pt-48 sm:pb-20">
+        <div aria-hidden className="dots absolute inset-0 -z-10" />
         <div className="container-x">
           <p className="eyebrow text-brand-300">Rechtliches</p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-6xl">{title}</h1>

@@ -1,7 +1,7 @@
 # Klar und Rein – Website
 
 Website der **Klar und Rein GmbH** (Adliswil ZH): Umzugsreinigung mit Abnahmegarantie, Wohnungs-, Büro-, Treppenhaus- und Baureinigung.
-Redesign der bisherigen Hostinger-Baukasten-Seite: gleiche Texte, Bilder, Farben (Navy/Logo-Blau), Schrift (Poppins) und Aufbau, technisch neu gebaut. Fokus: lokale Auffindbarkeit (SEO), KI-Antworten (AEO/GEO) und Anfragen.
+Redesign der bisherigen Hostinger-Baukasten-Seite: Texte, Bilder, Video, Logo, Farben (Navy/Logo-Blau) und Schrift (Poppins) übernommen, Layout hochwertiger und technisch neu gebaut (schwebender Header mit Mega-Menü, Vollbild-Menü auf dem Handy, Bento-Raster für Leistungen, Ablauf, Einzugsgebiet, FAQ, Kontaktkarte). Fokus: lokale Auffindbarkeit (SEO), KI-Antworten (AEO/GEO) und Anfragen.
 
 **Stack:** Vite · React 19 · TypeScript · Tailwind CSS 4 · react-router · lucide-react · Poppins (selbst gehostet)
 **Hosting:** Netlify (inkl. Netlify Forms für das Anfrageformular)
