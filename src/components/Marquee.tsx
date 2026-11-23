@@ -4,10 +4,14 @@ const items = [
   'Umzugsreinigung',
   'Abnahmegarantie',
   'Wohnungsreinigung',
-  'Tiefenreinigung',
   'Büroreinigung',
+  'Fensterreinigung',
+  'Unterhaltsreinigung',
   'Treppenhausreinigung',
+  'Hauswartung',
   'Baureinigung',
+  'Hochdruckreinigung',
+  'Fassadenreinigung',
   'Adliswil & Kanton Zürich',
 ]
 

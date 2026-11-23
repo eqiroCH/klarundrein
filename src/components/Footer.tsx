@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
+        <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Logo className="size-20" />
             <p className="mt-5 text-lg font-semibold">

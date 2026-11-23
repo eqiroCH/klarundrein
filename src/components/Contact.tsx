@@ -46,7 +46,7 @@ export default function Contact({ preset }: { preset?: string }) {
   return (
     <section id="kontakt" className="py-20 sm:py-28">
       <div className="container-x">
-        <Reveal className="grid overflow-hidden rounded-[2rem] bg-white shadow-[0_40px_100px_-50px_rgb(13_27_43/0.45)] ring-1 ring-cloud-200 lg:grid-cols-12">
+        <Reveal className="grid grid-cols-1 overflow-hidden rounded-[2rem] bg-white shadow-[0_40px_100px_-50px_rgb(13_27_43/0.45)] ring-1 ring-cloud-200 lg:grid-cols-12">
           {/* Linke Spalte: Bild der bisherigen Website, Kontaktwege */}
           <div className="relative isolate flex flex-col overflow-hidden bg-navy-950 p-7 text-white sm:p-10 lg:col-span-5">
             <img

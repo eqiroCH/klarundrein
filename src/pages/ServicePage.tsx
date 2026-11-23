@@ -6,7 +6,7 @@ import Contact from '../components/Contact'
 import JsonLd from '../components/JsonLd'
 import Process from '../components/Process'
 import AreaBand from '../components/AreaBand'
-import ServiceTile from '../components/ServiceTile'
+import ServiceGrid from '../components/ServiceGrid'
 import { Eyebrow, Sparkle } from '../components/Icons'
 import { areas, company, phoneHref, services, soft, type Service } from '../data/site'
 import { useSeo } from '../seo'
@@ -69,12 +69,12 @@ export default function ServicePage({ service: s }: { service: Service }) {
               <li aria-current="page" className="font-medium text-white">{s.name}</li>
             </ol>
           </nav>
-          <div className="mt-8 grid items-end gap-10 lg:grid-cols-12">
+          <div className="mt-8 grid grid-cols-1 grid-cols-1 items-end gap-10 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <p className="glass inline-flex animate-fade-up items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white/90">
                 <Sparkle className="size-3.5 text-brand-300" /> {s.teaser}
               </p>
-              <h1 className="mt-6 animate-fade-up text-[2.4rem] leading-[1.06] font-semibold tracking-tight text-balance [animation-delay:80ms] sm:text-6xl">
+              <h1 className="mt-6 animate-fade-up text-[2.15rem] leading-[1.08] font-semibold tracking-tight text-balance [animation-delay:80ms] min-[400px]:text-[2.4rem] sm:text-6xl">
                 {soft(s.h1)}
               </h1>
               <p className="mt-6 max-w-2xl animate-fade-up text-lg leading-relaxed text-white/80 [animation-delay:160ms] sm:text-xl">{s.lead}</p>
@@ -102,7 +102,7 @@ export default function ServicePage({ service: s }: { service: Service }) {
       </section>
 
       <section className="py-20 sm:py-28">
-        <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="container-x grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="self-start lg:sticky lg:top-32 lg:col-span-5">
             <Eyebrow>{s.cardTitle}</Eyebrow>
             <h2 className="mt-4 text-3xl leading-tight font-semibold tracking-tight text-balance text-navy-950 sm:text-4xl">{s.short}</h2>
@@ -135,7 +135,7 @@ export default function ServicePage({ service: s }: { service: Service }) {
                 className="aspect-[16/9] w-full object-cover"
               />
               <div className="bg-cloud-50 p-7 sm:p-10">
-                <h2 className="text-2xl font-semibold text-navy-950">{s.includesTitle}</h2>
+                <h2 className="text-2xl font-semibold text-navy-950">{soft(s.includesTitle)}</h2>
                 <ul className="mt-6 grid gap-4">
                   {s.includes.map((i) => (
                     <li key={i} className="flex gap-3 leading-relaxed text-ink-700">
@@ -166,21 +166,7 @@ export default function ServicePage({ service: s }: { service: Service }) {
               Alle Leistungen <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {others.map((o) => (
-              <li key={o.slug}>
-                <ServiceTile
-                  to={`/${o.slug}`}
-                  image={`/images/${o.image}.webp`}
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  imageAlt={o.imageAlt}
-                  title={`${o.name} Adliswil`}
-                  text={o.teaser}
-                  className="!min-h-[16rem]"
-                />
-              </li>
-            ))}
-          </ul>
+          <ServiceGrid services={others} variant="light" withCustom className="mt-8" />
         </div>
       </section>
     </>

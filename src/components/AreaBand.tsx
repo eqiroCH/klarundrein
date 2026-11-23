@@ -10,7 +10,7 @@ export default function AreaBand({ service }: { service?: string }) {
       <div className="container-x">
         <Reveal className="relative isolate overflow-hidden rounded-[2rem] bg-cloud-50 p-7 ring-1 ring-cloud-200 sm:p-12">
           <div aria-hidden className="rings absolute -top-40 -right-40 -z-10 size-[34rem] opacity-80 sm:-right-24" />
-          <div className="grid items-center gap-10 lg:grid-cols-12">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <span className="grid size-14 place-items-center rounded-2xl bg-brand-500 text-white shadow-[0_14px_30px_-12px_rgb(0_137_204/0.8)]">
                 <MapPin className="size-7" aria-hidden />

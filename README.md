@@ -17,7 +17,7 @@ npm run og      # Logo-Varianten, Favicons und OG-Bild aus design/logo-original.
 
 ## Seiten & SEO
 
-- `/` Startseite + je eine Seite pro Leistung (`/umzugsreinigung-adliswil`, `/wohnungsreinigung-adliswil`, `/bueroreinigung-adliswil`, `/treppenhausreinigung-adliswil`, `/baureinigung-adliswil`), `/impressum`, `/datenschutz`
+- `/` Startseite + je eine Seite pro Leistung (10): Umzugs-, Wohnungs-, Büro-, Fenster-, Unterhalts-, Treppenhaus-, Bau-, Hochdruck- und Fassadenreinigung sowie Hauswartung (`/<leistung>-adliswil`), dazu `/impressum`, `/datenschutz`
 - Alle Seiten werden beim Build vorgerendert (echtes HTML für Google und KI-Crawler), `sitemap.xml` wird automatisch erzeugt
 - Strukturierte Daten: LocalBusiness (in `index.html`), Service + BreadcrumbList pro Leistungsseite, FAQPage für jede FAQ
 - `public/robots.txt` erlaubt Suchmaschinen und KI-Bots, `public/llms.txt` fasst die Firma für KI-Assistenten zusammen
@@ -41,7 +41,8 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [ ] Leistungsumfang je Leistung prüfen (v. a. Umzugsreinigung: Fenster/Storen, Keller/Estrich)
 - [ ] Reinigungsmittel/Geräte werden mitgebracht? (FAQ)
 - [ ] Einzugsgebiet bestätigen (Liste in `areas`)
-- [ ] Bietet sie auch Fensterreinigung, Hauswartung, Maler/Renovation an? (laut Handelsregister-Zweck) → ggf. eigene Seiten
+- [ ] Umfang der neuen Leistungen bestätigen (Fenster, Unterhalt, Hauswartung inkl. Winterdienst, Hochdruck, Fassade) – Texte sind Vorschläge; Fotos sind Unsplash-Platzhalter
+- [ ] Maler/Renovation (laut Handelsregister-Zweck) auch anbieten? → ggf. eigene Seite
 - [ ] Echte Google-Bewertungen einbinden, sobald vorhanden. Die Vorlagen-Bewertungen der alten Seite («Lisa B.», «Sarah R.») wurden bewusst nicht übernommen, an ihrer Stelle steht der Bereich «Darauf können Sie sich verlassen»
 - [ ] Netlify: Formular-Benachrichtigung an info@klarundrein.ch einrichten (Site settings → Forms → Notifications)
 - [ ] Domain klarundrein.ch (Infomaniak, DNS aktuell bei Hostinger) auf Netlify zeigen lassen – **MX-Records/E-Mail vorher klären**

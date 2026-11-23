@@ -41,7 +41,7 @@ export default function FaqList({ faqs, withSchema = true }: { faqs: Faq[]; with
 export function FaqSection({ title, faqs }: { title: string; faqs: Faq[] }) {
   return (
     <section id="faq" className="bg-cloud-50 py-20 sm:py-28">
-      <div className="container-x grid gap-12 lg:grid-cols-12">
+      <div className="container-x grid grid-cols-1 gap-12 lg:grid-cols-12">
         <Reveal className="self-start lg:sticky lg:top-32 lg:col-span-4">
           <Eyebrow>Häufige Fragen</Eyebrow>
           <h2 className="mt-4 text-[2.1rem] leading-[1.12] font-semibold tracking-tight text-balance text-navy-950 sm:text-[2.6rem]">{soft(title)}</h2>

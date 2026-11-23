@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight, ChevronDown, Mail, Menu, MessageCircle, Phone, ShieldCheck, X } from 'lucide-react'
 import Logo from './Logo'
+import ServiceIcon from './ServiceIcon'
 import { Instagram, Sparkle } from './Icons'
 import { company, phoneHref, services, soft, whatsappHref } from '../data/site'
 
@@ -192,14 +193,16 @@ export default function Header() {
             }`}
           >
             <div className="grid grid-cols-12 gap-3 rounded-[1.75rem] border border-cloud-200 bg-white p-3 text-ink shadow-[0_30px_80px_-30px_rgb(13_27_43/0.45)]">
-              <ul className="col-span-8 grid grid-cols-2 gap-1">
+              <ul className="col-span-9 grid grid-cols-3 gap-1">
                 {services.map((s) => (
                   <li key={s.slug}>
-                    <Link to={`/${s.slug}`} className="group flex items-center gap-4 rounded-2xl p-3 transition-colors hover:bg-cloud-50">
-                      <img src={`/images/${s.image}.webp`} alt="" width={800} height={600} loading="lazy" className="size-16 shrink-0 rounded-xl object-cover" />
+                    <Link to={`/${s.slug}`} className="group flex items-center gap-3.5 rounded-2xl p-3 transition-colors hover:bg-cloud-50">
+                      <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-500 group-hover:text-white">
+                        <ServiceIcon name={s.icon} className="size-5" />
+                      </span>
                       <span className="min-w-0">
                         <span className="flex items-center gap-1.5 font-semibold text-navy-950">
-                          {s.name}
+                          <span className="min-w-0 hyphens-manual">{soft(s.name)}</span>
                           <ArrowRight className="size-4 -translate-x-1 text-brand-500 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" aria-hidden />
                         </span>
                         <span className="block text-sm text-ink-500">{s.teaser}</span>
@@ -208,9 +211,9 @@ export default function Header() {
                   </li>
                 ))}
                 <li>
-                  <Link to="/#kontakt" className="group flex h-full items-center gap-4 rounded-2xl p-3 transition-colors hover:bg-cloud-50">
-                    <span className="grid size-16 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600">
-                      <Sparkle className="size-7" />
+                  <Link to="/#kontakt" className="group flex h-full items-center gap-3.5 rounded-2xl p-3 transition-colors hover:bg-cloud-50">
+                    <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-500 group-hover:text-white">
+                      <Sparkle className="size-5" />
                     </span>
                     <span>
                       <span className="block font-semibold text-navy-950">Individuelle Anfragen</span>
@@ -221,7 +224,7 @@ export default function Header() {
               </ul>
               <Link
                 to={`/${featured.slug}`}
-                className="group relative isolate col-span-4 flex min-h-[15rem] flex-col justify-end overflow-hidden rounded-2xl p-6 text-white"
+                className="group relative isolate col-span-3 flex min-h-[15rem] flex-col justify-end overflow-hidden rounded-2xl p-6 text-white"
               >
                 <img src={`/images/${featured.image}.webp`} alt="" width={800} height={600} loading="lazy" className="absolute inset-0 -z-20 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <span aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950/95 via-navy-950/50 to-transparent" />
@@ -267,20 +270,23 @@ export default function Header() {
             <p className="eyebrow mt-10 text-brand-300">
               <Sparkle className="size-3.5" /> Leistungen
             </p>
-            <ul className="mt-4 grid grid-cols-2 gap-3">
+            <ul className="mt-4 grid grid-cols-1 gap-2 min-[360px]:grid-cols-2">
               {services.map((s, i) => (
-                <li key={s.slug} className="animate-fade-up" style={{ animationDelay: `${300 + i * 50}ms` }}>
-                  <Link to={`/${s.slug}`} onClick={() => setOpen(false)} className="relative isolate flex aspect-[4/3] items-end overflow-hidden rounded-2xl p-3">
-                    <img src={`/images/${s.image}.webp`} alt="" width={800} height={600} loading="lazy" className="absolute inset-0 -z-20 size-full object-cover" />
-                    <span aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950/90 to-navy-950/10" />
-                    <span className="text-[0.95rem] leading-tight font-semibold hyphens-manual">{soft(s.name)}</span>
+                <li key={s.slug} className="animate-fade-up" style={{ animationDelay: `${280 + i * 35}ms` }}>
+                  <Link to={`/${s.slug}`} onClick={() => setOpen(false)} className="glass flex h-full items-center gap-2.5 rounded-2xl p-2.5">
+                    <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-brand-500">
+                      <ServiceIcon name={s.icon} className="size-[1.1rem]" />
+                    </span>
+                    <span className="min-w-0 text-[0.8rem] leading-tight font-semibold hyphens-manual">{soft(s.name)}</span>
                   </Link>
                 </li>
               ))}
-              <li className="animate-fade-up" style={{ animationDelay: '550ms' }}>
-                <Link to="/#kontakt" onClick={() => setOpen(false)} className="flex aspect-[4/3] flex-col justify-between rounded-2xl bg-brand-500 p-3">
-                  <Sparkle className="size-6" />
-                  <span className="text-[0.95rem] leading-tight font-semibold">Individuelle Anfragen</span>
+              <li className="animate-fade-up min-[360px]:col-span-2" style={{ animationDelay: '650ms' }}>
+                <Link to="/#kontakt" onClick={() => setOpen(false)} className="flex items-center gap-3 rounded-2xl bg-brand-500 p-3">
+                  <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-white/15">
+                    <Sparkle className="size-5" />
+                  </span>
+                  <span className="text-[0.9rem] font-semibold">Individuelle Anfrage – wir finden eine Lösung</span>
                 </Link>
               </li>
             </ul>

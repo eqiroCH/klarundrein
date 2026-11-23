@@ -8,6 +8,7 @@ import Marquee from '../components/Marquee'
 import Process from '../components/Process'
 import AreaBand from '../components/AreaBand'
 import ServiceTile from '../components/ServiceTile'
+import ServiceGrid from '../components/ServiceGrid'
 import Logo from '../components/Logo'
 import { Eyebrow, Sparkle } from '../components/Icons'
 import { company, generalFaqs, heroCards, phoneHref, promises, services, stats } from '../data/site'
@@ -73,7 +74,13 @@ export default function Home() {
             </ul>
           </div>
 
-          <ul className="glass mt-10 grid animate-fade-up overflow-hidden rounded-3xl [animation-delay:420ms] sm:grid-cols-3">
+          <div className="mt-8 animate-fade-up [animation-delay:420ms] sm:hidden">
+            <p className="eyebrow mb-3 text-brand-300">
+              <Sparkle className="size-3.5" /> Unsere Leistungen
+            </p>
+            <ServiceGrid services={services} variant="hero" />
+          </div>
+          <ul className="glass mt-10 hidden animate-fade-up overflow-hidden rounded-3xl [animation-delay:420ms] sm:grid sm:grid-cols-3">
             {heroCards.map((c, i) => (
               <li key={c.title} className="border-white/10 not-first:border-t sm:not-first:border-t-0 sm:not-first:border-l">
                 <Link to={c.to} className="group relative flex h-full flex-col p-6 transition-colors hover:bg-white/[0.07]">
@@ -92,7 +99,7 @@ export default function Home() {
 
       {/* Über uns */}
       <section id="ueber-uns" className="overflow-hidden py-20 sm:py-28">
-        <div className="container-x grid items-center gap-16 lg:grid-cols-12 lg:gap-12">
+        <div className="container-x grid grid-cols-1 items-center gap-16 lg:grid-cols-12 lg:gap-12">
           <Reveal className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
             <Sparkle className="absolute -top-6 right-6 size-10 text-brand-300" />
             <Sparkle className="absolute -top-1 right-0 size-5 text-brand-500" />
@@ -178,7 +185,14 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:auto-rows-[19rem] lg:grid-cols-3 lg:gap-5">
+          <Reveal className="mt-12">
+            <ServiceGrid services={services} variant="dark" />
+          </Reveal>
+
+          <p className="eyebrow mt-16 text-brand-300">
+            <Sparkle className="size-3.5" /> Unsere Schwerpunkte
+          </p>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:auto-rows-[19rem] lg:grid-cols-3 lg:gap-5">
             <Reveal as="li" className="sm:col-span-2 lg:row-span-2">
               <ServiceTile
                 to={`/${umzug.slug}`}
@@ -232,7 +246,7 @@ export default function Home() {
           className="absolute inset-0 -z-20 size-full object-cover"
         />
         <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-950/70" />
-        <div className="container-x grid items-center gap-12 lg:grid-cols-12">
+        <div className="container-x grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <Eyebrow className="text-brand-300">Unser Versprechen</Eyebrow>
             <h2 className="h-section mt-4">Darauf können Sie sich verlassen</h2>

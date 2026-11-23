@@ -44,6 +44,18 @@ export const areas = [
 
 export type Faq = { q: string; a: string }
 
+export type ServiceIconName =
+  | 'umzug'
+  | 'wohnung'
+  | 'buero'
+  | 'fenster'
+  | 'unterhalt'
+  | 'treppenhaus'
+  | 'hauswartung'
+  | 'bau'
+  | 'hochdruck'
+  | 'fassade'
+
 export type Service = {
   slug: string
   name: string
@@ -51,6 +63,8 @@ export type Service = {
   cardTitle: string
   /** Kurzzeile fürs Menü */
   teaser: string
+  /** Symbol für Übersichten (siehe components/ServiceIcon.tsx) */
+  icon: ServiceIconName
   /** Kartentext wie auf der bisherigen Website */
   short: string
   /** Bild in /public/images: <image>.webp (Karte) und <image>-wide(-sm).webp (Seitenkopf) */
@@ -73,6 +87,7 @@ export const services: Service[] = [
     name: 'Umzugsreinigung',
     cardTitle: 'Umzugsreinigung',
     teaser: 'Endreinigung mit Abnahmegarantie',
+    icon: 'umzug',
     short: 'Für eine ordentliche und problemlose Wohnungsübergabe. Sorgfältige Reinigung mit Abnahmegarantie.',
     image: 'umzug',
     imageAlt: 'Frau packt beim Umzug Kartons in einer hellen Wohnung',
@@ -121,6 +136,7 @@ export const services: Service[] = [
     name: 'Wohnungsreinigung',
     cardTitle: 'Wohnungsreinigung',
     teaser: 'Regelmässig oder als Tiefenreinigung',
+    icon: 'wohnung',
     short: 'Ob regelmässig oder nach Bedarf. Wir reinigen Ihre Wohnung gründlich und sorgfältig, damit Sie sich wohlfühlen können.',
     image: 'wohnung',
     imageAlt: 'Reinigungskraft wischt den Boden einer hellen Wohnung',
@@ -163,6 +179,7 @@ export const services: Service[] = [
     name: 'Büroreinigung',
     cardTitle: 'Büroreinigungen',
     teaser: 'Unterhaltsreinigung nach Ihren Zeiten',
+    icon: 'buero',
     short: 'Wir sorgen für saubere Büroräume und passen uns Ihren Terminwünschen an.',
     image: 'buero',
     imageAlt: 'Sauberes Sitzungszimmer mit Holztisch und Bürostühlen',
@@ -201,10 +218,93 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: 'fensterreinigung-adliswil',
+    name: 'Fensterreinigung',
+    cardTitle: 'Fensterreinigung',
+    teaser: 'Glas, Rahmen, Falze und Storen',
+    icon: 'fenster',
+    short: 'Streifenfreie Fenster innen und aussen – inklusive Rahmen, Falze und auf Wunsch Storen.',
+    image: 'fenster',
+    imageAlt: 'Fenster wird mit einem Abzieher streifenfrei gereinigt',
+    metaTitle: 'Fensterreinigung Adliswil – streifenfrei, innen & aussen | Klar und Rein',
+    metaDescription:
+      'Fensterreinigung in Adliswil und Umgebung: Glas, Rahmen, Falze und Storen, innen und aussen. Für Wohnungen, Häuser, Büros und Läden. Kostenlose Offerte.',
+    h1: 'Fensterreinigung in Adliswil',
+    lead: 'Klare Sicht ohne Streifen: Wir reinigen Ihre Fenster innen und aussen – samt Rahmen, Falzen und Fenstersimsen.',
+    intro: [
+      'Saubere Fenster machen jeden Raum heller. Wir reinigen Glasflächen streifenfrei und vergessen dabei auch Rahmen, Falze und Simse nicht – dort, wo sich Staub und Schmutz am liebsten sammeln.',
+      'Ob einmalig im Frühling, vor einem Anlass oder regelmässig im Abo: Wir reinigen Fenster in Wohnungen, Häusern, Büros und Ladenlokalen in Adliswil und im ganzen Kanton Zürich.',
+    ],
+    includesTitle: 'Das gehört zur Fensterreinigung',
+    includes: [
+      'Glasflächen innen und aussen streifenfrei',
+      'Fensterrahmen, Falze und Dichtungen',
+      'Fenstersimse und Fensterbänke',
+      'Storen, Lamellen und Rollläden nach Absprache',
+      'Glastüren, Glasgeländer und Wintergärten',
+      'Schaufenster und Eingangsbereiche für Geschäfte',
+    ],
+    idealFor: ['Wohnungen und Häuser', 'Büros, Praxen und Läden', 'Einmalig oder regelmässig'],
+    faqs: [
+      {
+        q: 'Wie oft sollten Fenster gereinigt werden?',
+        a: 'In Wohnungen reicht meist zwei- bis viermal pro Jahr. Schaufenster und Eingangsbereiche von Geschäften reinigen wir je nach Lage auch monatlich oder wöchentlich.',
+      },
+      {
+        q: 'Reinigen Sie auch Storen und Rollläden?',
+        a: 'Ja, auf Wunsch reinigen wir Lamellenstoren, Rollläden und Fensterläden gleich mit. Wir halten das in der Offerte fest.',
+      },
+      {
+        q: 'Was kostet eine Fensterreinigung?',
+        a: 'Das hängt von der Anzahl und Grösse der Fenster und von Storen oder Sprossen ab. Sie erhalten eine kostenlose Offerte – gerne auch anhand von Fotos.',
+      },
+    ],
+  },
+  {
+    slug: 'unterhaltsreinigung-adliswil',
+    name: 'Unterhaltsreinigung',
+    cardTitle: 'Unterhaltsreinigung',
+    teaser: 'Regelmässig nach festem Plan',
+    icon: 'unterhalt',
+    short: 'Regelmässige Reinigung nach festem Plan – für Firmen, Praxen und Liegenschaften.',
+    image: 'unterhalt',
+    imageAlt: 'Boden eines hellen Gangs wird mit dem Wischmopp gereinigt',
+    metaTitle: 'Unterhaltsreinigung Adliswil – regelmässig nach Plan | Klar und Rein',
+    metaDescription:
+      'Unterhaltsreinigung in Adliswil und im Kanton Zürich: regelmässige Reinigung von Büros, Praxen, Geschäften und Liegenschaften nach festem Plan. Offerte anfragen.',
+    h1: 'Unterhaltsreinigung in Adliswil',
+    lead: 'Immer sauber, ohne dass Sie daran denken müssen: Wir reinigen Ihre Räume regelmässig nach einem festen, gemeinsam vereinbarten Plan.',
+    intro: [
+      'Bei der Unterhaltsreinigung legen wir gemeinsam fest, was wie oft gereinigt wird – täglich, wöchentlich oder in einem anderen Rhythmus. So bleiben Büros, Praxen, Geschäfte und Gemeinschaftsflächen dauerhaft gepflegt.',
+      'Sie haben eine feste Ansprechperson, klare Absprachen und auf Wunsch Reinigungszeiten ausserhalb Ihrer Öffnungs- oder Bürozeiten.',
+    ],
+    includesTitle: 'Das gehört zur Unterhaltsreinigung',
+    includes: [
+      'Individueller Reinigungsplan mit festen Intervallen',
+      'Böden saugen und feucht reinigen',
+      'Sanitäranlagen reinigen und Verbrauchsmaterial auffüllen',
+      'Küchen, Pausenräume und Oberflächen',
+      'Abfall und Recycling entsorgen',
+      'Regelmässige Qualitätskontrolle und klare Ansprechperson',
+    ],
+    idealFor: ['Büros und Praxen', 'Läden und Gewerberäume', 'Liegenschaften und Verwaltungen'],
+    faqs: [
+      {
+        q: 'Was ist der Unterschied zur Grundreinigung?',
+        a: 'Die Unterhaltsreinigung hält Räume im Alltag sauber und findet regelmässig statt. Eine Grund- oder Tiefenreinigung ist ein einmaliger, gründlicher Einsatz – zum Beispiel vor dem Start der Unterhaltsreinigung.',
+      },
+      {
+        q: 'Können die Reinigungszeiten angepasst werden?',
+        a: 'Ja. Wir reinigen früh morgens, abends oder am Wochenende, damit Ihr Betrieb ungestört weiterläuft.',
+      },
+    ],
+  },
+  {
     slug: 'treppenhausreinigung-adliswil',
     name: 'Treppenhausreinigung',
     cardTitle: 'Treppenhausreinigungen',
     teaser: 'Für Liegenschaften und Verwaltungen',
+    icon: 'treppenhaus',
     short: 'Ein sauberes Treppenhaus hinterlässt einen positiven Eindruck. Böden, Geländer und Eingangsbereiche werden zuverlässig gereinigt.',
     image: 'treppenhaus',
     imageAlt: 'Helles, sauberes Treppenhaus mit Geländer',
@@ -239,10 +339,50 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: 'hauswartung-adliswil',
+    name: 'Hauswartung',
+    cardTitle: 'Hauswartung',
+    teaser: 'Treppenhaus, Umgebung, Winterdienst',
+    icon: 'hauswartung',
+    short: 'Rundum gepflegte Liegenschaften – vom Treppenhaus über die Umgebung bis zum Winterdienst.',
+    image: 'hauswartung',
+    imageAlt: 'Hauswart pflegt den Rasen vor einem Wohnhaus',
+    metaTitle: 'Hauswartung Adliswil – Treppenhaus, Umgebung, Winterdienst | Klar und Rein',
+    metaDescription:
+      'Hauswartung in Adliswil und Umgebung für Verwaltungen, STWEG und Vermieter: Treppenhausreinigung, Umgebungspflege, Winterdienst und Kontrollgänge aus einer Hand.',
+    h1: 'Hauswartung in Adliswil',
+    lead: 'Eine Ansprechperson für Ihre Liegenschaft: Wir kümmern uns um Sauberkeit, Umgebung und Winterdienst – zuverlässig und im vereinbarten Rhythmus.',
+    intro: [
+      'Für Verwaltungen, Eigentümergemeinschaften und private Vermieter übernehmen wir die Hauswartung von Mehrfamilienhäusern und Geschäftsliegenschaften in Adliswil und Umgebung.',
+      'Den Umfang stellen wir individuell zusammen – von der regelmässigen Treppenhausreinigung über die Umgebungspflege bis zum Winterdienst. So bleibt Ihre Liegenschaft das ganze Jahr gepflegt.',
+    ],
+    includesTitle: 'Das kann zur Hauswartung gehören',
+    includes: [
+      'Reinigung von Treppenhaus, Lift, Keller und Waschküche',
+      'Umgebungspflege: Rasen, Hecken, Laub und Wege',
+      'Winterdienst: Schneeräumung und Streuen',
+      'Bereitstellen der Abfall- und Recyclingcontainer',
+      'Regelmässige Kontrollgänge',
+      'Kleinere Unterhaltsarbeiten nach Absprache',
+    ],
+    idealFor: ['Liegenschaftsverwaltungen', 'Eigentümergemeinschaften (STWEG)', 'Private Vermieterinnen und Vermieter'],
+    faqs: [
+      {
+        q: 'Was gehört alles zur Hauswartung?',
+        a: 'Das legen wir gemeinsam fest. Typisch sind Treppenhausreinigung, Umgebungspflege, Winterdienst und das Bereitstellen der Abfallcontainer. Den genauen Umfang halten wir in der Offerte fest.',
+      },
+      {
+        q: 'Übernehmen Sie auch den Winterdienst?',
+        a: 'Ja, auf Wunsch räumen wir Zugänge und Wege von Schnee und streuen bei Glätte.',
+      },
+    ],
+  },
+  {
     slug: 'baureinigung-adliswil',
     name: 'Baureinigung',
     cardTitle: 'Baureinigungen',
     teaser: 'Nach Neubau, Umbau und Renovation',
+    icon: 'bau',
     short: 'Reinigung nach Bauarbeiten und Renovationen für einen einwandfreien Zustand.',
     image: 'bau',
     imageAlt: 'Reinigungsfachmann mit Drucksprüher nach Bauarbeiten',
@@ -276,6 +416,84 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    slug: 'hochdruckreinigung-adliswil',
+    name: 'Hochdruckreinigung',
+    cardTitle: 'Hochdruckreinigung',
+    teaser: 'Terrassen, Plätze und Einfahrten',
+    icon: 'hochdruck',
+    short: 'Terrassen, Plattenwege, Einfahrten und Garagen – wieder wie neu, ohne Moos und Algen.',
+    image: 'hochdruck',
+    imageAlt: 'Platz wird mit einem Hochdruck-Flächenreiniger gereinigt',
+    metaTitle: 'Hochdruckreinigung Adliswil – Terrassen, Plätze, Einfahrten | Klar und Rein',
+    metaDescription:
+      'Hochdruckreinigung in Adliswil und im Kanton Zürich: Terrassen, Plattenwege, Einfahrten, Garagen und Balkone von Moos, Algen und Schmutz befreien. Offerte anfragen.',
+    h1: 'Hochdruckreinigung in Adliswil',
+    lead: 'Moos, Algen und hartnäckiger Schmutz verschwinden: Wir reinigen Aussenflächen gründlich und schonend – passend zum jeweiligen Belag.',
+    intro: [
+      'Mit der Zeit setzen sich auf Terrassen, Wegen und Einfahrten Moos, Algen und Schmutz fest. Das sieht nicht nur unschön aus, sondern macht Flächen auch rutschig.',
+      'Wir reinigen mit Hochdruck und Flächenreinigern und passen Druck und Verfahren an das Material an – ob Stein, Beton, Platten oder Holz.',
+    ],
+    includesTitle: 'Das reinigen wir mit Hochdruck',
+    includes: [
+      'Terrassen, Sitzplätze und Balkone',
+      'Plattenwege, Einfahrten und Vorplätze',
+      'Garagen, Tiefgaragen und Abstellplätze',
+      'Mauern, Treppen und Sockel',
+      'Entfernen von Moos, Algen und Grünbelag',
+      'Gartenmöbel und Aussenbereiche nach Absprache',
+    ],
+    idealFor: ['Haus- und Wohnungsbesitzer', 'Verwaltungen und STWEG', 'Gewerbe und Gastronomie'],
+    faqs: [
+      {
+        q: 'Ist Hochdruck für jeden Belag geeignet?',
+        a: 'Nicht jeder Belag verträgt denselben Druck. Wir prüfen die Fläche vorher und wählen Druck, Düse und Verfahren passend zum Material.',
+      },
+      {
+        q: 'Wann ist der beste Zeitpunkt?',
+        a: 'Ideal sind Frühling und Herbst – vor der Gartensaison oder bevor Laub und Nässe die Flächen rutschig machen.',
+      },
+    ],
+  },
+  {
+    slug: 'fassadenreinigung-adliswil',
+    name: 'Fassadenreinigung',
+    cardTitle: 'Fassadenreinigung',
+    teaser: 'Schonend je nach Material',
+    icon: 'fassade',
+    short: 'Saubere Fassaden ohne Algen und Grünbelag – schonend gereinigt, passend zum Material.',
+    image: 'fassade',
+    imageAlt: 'Fachkraft reinigt eine Glasfassade',
+    metaTitle: 'Fassadenreinigung Adliswil – Algen & Schmutz entfernen | Klar und Rein',
+    metaDescription:
+      'Fassadenreinigung in Adliswil und im Kanton Zürich: Algen, Grünbelag und Schmutz schonend entfernen – für Einfamilienhäuser, Mehrfamilienhäuser und Geschäftsliegenschaften.',
+    h1: 'Fassadenreinigung in Adliswil',
+    lead: 'Eine gepflegte Fassade wertet das ganze Gebäude auf. Wir entfernen Schmutz, Algen und Grünbelag – schonend und passend zum Material.',
+    intro: [
+      'Wetter, Verkehr und Feuchtigkeit hinterlassen Spuren: Grauschleier, Algen und Grünbelag lassen Fassaden schnell alt aussehen.',
+      'Vor der Reinigung prüfen wir die Fassade und wählen ein schonendes Verfahren – für Putz, Klinker, Holz, Metall oder Glas. So wird das Gebäude sauber, ohne die Oberfläche zu belasten.',
+    ],
+    includesTitle: 'Das gehört zur Fassadenreinigung',
+    includes: [
+      'Besichtigung und Prüfung der Fassade',
+      'Entfernen von Algen, Grünbelag und Grauschleier',
+      'Schonende Verfahren je nach Material',
+      'Reinigung von Sockeln, Vordächern und Eingangsbereichen',
+      'Glasfassaden und Fensterfronten',
+      'Abdecken und Schützen der Umgebung',
+    ],
+    idealFor: ['Einfamilienhäuser', 'Mehrfamilienhäuser', 'Geschäftsliegenschaften'],
+    faqs: [
+      {
+        q: 'Wie wird die Fassade gereinigt?',
+        a: 'Je nach Material und Verschmutzung mit Niederdruck oder Hochdruck und passenden Reinigungsmitteln. Wir prüfen die Fassade vorher und schlagen das geeignete Verfahren vor.',
+      },
+      {
+        q: 'Was kostet eine Fassadenreinigung?',
+        a: 'Das hängt von Fläche, Höhe, Material und Zugänglichkeit ab. Nach einer kurzen Besichtigung erhalten Sie eine kostenlose Offerte.',
+      },
+    ],
+  },
 ]
 
 export const generalFaqs: Faq[] = [
@@ -300,8 +518,12 @@ export const generalFaqs: Faq[] = [
     a: 'Füllen Sie das Anfrageformular aus, rufen Sie uns an oder schreiben Sie uns auf WhatsApp. Für eine genaue Offerte schauen wir die Räume kurz an oder Sie senden uns ein paar Fotos.',
   },
   {
+    q: 'Welche Reinigungen bietet Klar und Rein an?',
+    a: 'Umzugsreinigung mit Abnahmegarantie, Wohnungs- und Tiefenreinigung, Büroreinigung, Fensterreinigung, Unterhaltsreinigung, Treppenhausreinigung, Hauswartung, Baureinigung, Hochdruckreinigung und Fassadenreinigung – für Privat- und Geschäftskunden in Adliswil und im ganzen Kanton Zürich.',
+  },
+  {
     q: 'Reinigen Sie auch regelmässig für Firmen und Verwaltungen?',
-    a: 'Ja. Neben Umzugs- und Wohnungsreinigungen übernehmen wir die regelmässige Unterhaltsreinigung von Büros, Praxen und Treppenhäusern.',
+    a: 'Ja. Wir übernehmen die regelmässige Unterhaltsreinigung von Büros, Praxen und Geschäften sowie Treppenhausreinigung und Hauswartung für Liegenschaften.',
   },
 ]
 
@@ -345,5 +567,5 @@ export const steps = [
   { title: 'Abnahme', text: 'Sie prüfen das Ergebnis. Bei der Umzugsreinigung gilt unsere Abnahmegarantie.' },
 ]
 
-/** Weiche Trennstelle vor «reinigung», damit lange Wörter auf kleinen Kacheln sauber umbrechen */
-export const soft = (word: string) => word.replace(/(.)(reinigung)/, '$1­$2')
+/** Weiche Trennstellen («…reinigung», «…wartung», «Abnahmegarantie»), damit lange Wörter auf kleinen Kacheln sauber umbrechen */
+export const soft = (word: string) => word.replace(/(.)(reinigung|wartung)/, '$1\u00AD$2').replace(/(Abnahme)(garantie)/, '$1\u00AD$2')
