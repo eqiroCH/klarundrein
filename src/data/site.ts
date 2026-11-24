@@ -95,7 +95,7 @@ export const services: Service[] = [
     icon: 'umzug',
     short: 'Für eine ordentliche und problemlose Wohnungsübergabe. Sorgfältige Reinigung – auf Wunsch mit Abnahmegarantie.',
     image: 'umzug',
-    imageAlt: 'Frau packt beim Umzug Kartons in einer hellen Wohnung',
+    imageAlt: 'Küche nach der Umzugsreinigung durch Klar und Rein – Schränke, Abdeckung und Spülbecken sauber',
     metaTitle: 'Umzugsreinigung Adliswil – Abnahmegarantie auf Wunsch | Klar und Rein',
     metaDescription:
       'Umzugs- und Endreinigung in Adliswil, Langnau, Kilchberg, Thalwil und Zürich – gründlich, auf Wunsch mit Abnahmegarantie. Jetzt kostenlose Offerte anfragen.',
@@ -227,7 +227,7 @@ export const services: Service[] = [
     icon: 'fenster',
     short: 'Streifenfreie Fenster innen und aussen – inklusive Rahmen, Falze und auf Wunsch Storen.',
     image: 'fenster',
-    imageAlt: 'Fenster wird mit einem Abzieher streifenfrei gereinigt',
+    imageAlt: 'Fenstertür nach der Fensterreinigung in Horgen, davor Putzeimer und Fensterabzieher von Klar und Rein',
     metaTitle: 'Fensterreinigung Adliswil – streifenfrei, innen & aussen | Klar und Rein',
     metaDescription:
       'Fensterreinigung in Adliswil und Umgebung: Glas, Rahmen, Falze und Storen, innen und aussen. Für Wohnungen, Häuser, Büros und Läden. Kostenlose Offerte.',
@@ -421,7 +421,7 @@ export const services: Service[] = [
     icon: 'hochdruck',
     short: 'Terrassen, Plattenwege, Einfahrten und Garagen – wieder wie neu, ohne Moos und Algen.',
     image: 'hochdruck',
-    imageAlt: 'Platz wird mit einem Hochdruck-Flächenreiniger gereinigt',
+    imageAlt: 'Laubengang bei der Deckenreinigung mit Hochdruck – Hochdruckgerät und Schlauch von Klar und Rein',
     metaTitle: 'Hochdruckreinigung Adliswil – Terrassen, Plätze, Einfahrten | Klar und Rein',
     metaDescription:
       'Hochdruckreinigung in Adliswil und im Kanton Zürich: Terrassen, Plattenwege, Einfahrten, Garagen und Balkone von Moos, Algen und Schmutz befreien. Offerte anfragen.',

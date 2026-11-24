@@ -7,6 +7,7 @@ import HeroVideo from '../components/HeroVideo'
 import Marquee from '../components/Marquee'
 import Process from '../components/Process'
 import AreaBand from '../components/AreaBand'
+import Einblicke from '../components/Einblicke'
 import ServiceTile from '../components/ServiceTile'
 import ServiceGrid from '../components/ServiceGrid'
 import Logo from '../components/Logo'
@@ -235,6 +236,9 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      {/* Einblicke – echte Fotos von Instagram */}
+      <Einblicke />
 
       {/* Versprechen – Hintergrundbild des bisherigen Bewertungsbereichs */}
       <section className="relative isolate overflow-hidden py-20 text-white sm:py-28">
