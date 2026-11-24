@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, BadgeCheck, Check, ChevronRight, Phone, ShieldCheck } from 'lucide-react'
+import { ArrowRight, BadgeCheck, Check, ChevronRight, Phone, Plus, ShieldCheck } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import { FaqSection } from '../components/Faq'
 import Contact from '../components/Contact'
@@ -117,8 +117,8 @@ export default function ServicePage({ service: s }: { service: Service }) {
                   <ShieldCheck className="size-6" aria-hidden />
                 </span>
                 <p>
-                  <strong className="block text-lg font-semibold">Abnahmegarantie inklusive</strong>
-                  <span className="text-white/75">Bemängelt die Verwaltung etwas an der Reinigung, reinigen wir kostenlos nach.</span>
+                  <strong className="block text-lg font-semibold">Abnahmegarantie auf Wunsch</strong>
+                  <span className="text-white/75">Wir sind bei der Wohnungsabgabe dabei und reinigen direkt nach, falls die Verwaltung etwas beanstandet.</span>
                 </p>
               </div>
             )}
@@ -135,7 +135,7 @@ export default function ServicePage({ service: s }: { service: Service }) {
                 className="aspect-[16/9] w-full object-cover"
               />
               <div className="bg-cloud-50 p-7 sm:p-10">
-                <h2 className="text-2xl font-semibold text-navy-950">{soft(s.includesTitle)}</h2>
+                <h2 className="text-2xl font-semibold text-navy-950">{soft(s.name)} – Leistungen nach Wahl</h2>
                 <ul className="mt-6 grid gap-4">
                   {s.includes.map((i) => (
                     <li key={i} className="flex gap-3 leading-relaxed text-ink-700">
@@ -145,8 +145,14 @@ export default function ServicePage({ service: s }: { service: Service }) {
                       {i}
                     </li>
                   ))}
+                  <li className="flex gap-3 leading-relaxed font-medium text-ink-500">
+                    <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-cloud-200 text-ink-700">
+                      <Plus className="size-3.5" strokeWidth={3} aria-hidden />
+                    </span>
+                    Weitere Leistungen nach Absprache möglich …
+                  </li>
                 </ul>
-                <p className="mt-7 border-t border-cloud-200 pt-5 text-sm text-ink-500">Den genauen Umfang halten wir in Ihrer Offerte fest.</p>
+                <p className="mt-7 border-t border-cloud-200 pt-5 text-sm text-ink-500">Sie wählen, was gereinigt wird – den genauen Umfang halten wir in Ihrer Offerte fest.</p>
               </div>
             </div>
           </Reveal>

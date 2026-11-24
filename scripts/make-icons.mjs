@@ -34,7 +34,7 @@ const overlay = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="63
   <text x="72" y="345" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#7cc3ea" letter-spacing="3">REINIGUNGSFIRMA IN ADLISWIL</text>
   <text x="72" y="430" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#fff">Sauberkeit schafft</text>
   <text x="72" y="510" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#fff">Vertrauen.</text>
-  <text x="72" y="572" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="26" fill="#cfd8e3">Umzugsreinigung mit Abnahmegarantie · Wohnung · Büro · Treppenhaus · Bau</text>
+  <text x="72" y="572" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="26" fill="#cfd8e3">Umzugsreinigung · Wohnung · Büro · Fenster · Hauswartung · Bau</text>
 </svg>`
 await sharp(bg)
   .composite([

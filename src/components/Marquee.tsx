@@ -2,7 +2,7 @@ import { Sparkle } from './Icons'
 
 const items = [
   'Umzugsreinigung',
-  'Abnahmegarantie',
+  'Abnahmegarantie auf Wunsch',
   'Wohnungsreinigung',
   'Büroreinigung',
   'Fensterreinigung',

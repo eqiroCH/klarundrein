@@ -11,7 +11,7 @@ import ServiceTile from '../components/ServiceTile'
 import ServiceGrid from '../components/ServiceGrid'
 import Logo from '../components/Logo'
 import { Eyebrow, Sparkle } from '../components/Icons'
-import { company, generalFaqs, heroCards, phoneHref, promises, services, stats } from '../data/site'
+import { company, generalFaqs, heroCards, phoneHref, promises, services } from '../data/site'
 import { useSeo } from '../seo'
 
 const bySlug = (slug: string) => services.find((s) => s.slug === slug)!
@@ -66,7 +66,7 @@ export default function Home() {
               </a>
             </div>
             <ul className="mt-9 flex animate-fade-up flex-wrap gap-x-6 gap-y-2 text-[0.95rem] text-white/80 [animation-delay:320ms]">
-              {['Abnahmegarantie', 'Offerte kostenlos', 'Lokal in Adliswil'].map((t) => (
+              {['Abnahmegarantie auf Wunsch', 'Offerte kostenlos', 'Lokal in Adliswil'].map((t) => (
                 <li key={t} className="flex items-center gap-2">
                   <BadgeCheck className="size-5 text-brand-300" aria-hidden /> {t}
                 </li>
@@ -124,9 +124,9 @@ export default function Home() {
             <div className="absolute top-8 right-3 flex items-center gap-2.5 rounded-2xl bg-brand-500 px-4 py-3 text-white shadow-[0_20px_40px_-18px_rgb(0_137_204/0.9)] sm:-right-6">
               <ShieldCheck className="size-6" aria-hidden />
               <span className="text-sm leading-tight font-semibold">
-                Abnahme-
+                Abnahmegarantie
                 <br />
-                garantie
+                <span className="font-normal text-white/85">auf Wunsch</span>
               </span>
             </div>
           </Reveal>
@@ -158,7 +158,11 @@ export default function Home() {
               ))}
             </ul>
             <dl className="mt-10 grid grid-cols-3 divide-x divide-cloud-200 rounded-3xl bg-cloud-50 py-6 ring-1 ring-cloud-200">
-              {[...stats, { value: String(company.founded), label: 'Gegründet in Adliswil' }].map((s) => (
+              {[
+                { value: String(company.founded), label: 'Gegründet in Adliswil' },
+                { value: String(services.length), label: 'Reinigungsleistungen' },
+                { value: 'Mo–Fr', label: '07:30–18:00 erreichbar' },
+              ].map((s) => (
                 <div key={s.label} className="flex flex-col-reverse px-4 text-center sm:px-6">
                   <dt className="mt-1 text-xs leading-snug text-ink-500 sm:text-sm">{s.label}</dt>
                   <dd className="text-3xl font-semibold text-brand-500 sm:text-4xl">{s.value}</dd>
@@ -202,7 +206,7 @@ export default function Home() {
                 imageAlt={umzug.imageAlt}
                 title={umzug.cardTitle}
                 text={umzug.short}
-                badge="Mit Abnahmegarantie"
+                badge="Abnahmegarantie auf Wunsch"
                 large
                 className="min-h-[24rem]"
               />

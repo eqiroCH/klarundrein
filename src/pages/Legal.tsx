@@ -48,7 +48,7 @@ export function Impressum() {
       {company.manager && (
         <div>
           <h2>Vertretungsberechtigte Person</h2>
-          <p>{company.manager}, Geschäftsführung</p>
+          <p>{company.manager}, Geschäftsführer und Inhaber</p>
         </div>
       )}
       <div>

@@ -11,7 +11,7 @@ export const company = {
   register: 'Handelsregisteramt des Kantons Zürich',
   founded: 2025,
   // TODO: Name der Geschäftsführung fürs Impressum (solange null, wird die Zeile ausgeblendet)
-  manager: null as string | null,
+  manager: 'Arxhend Hoxha' as string | null,
   email: 'info@klarundrein.ch',
   phone: '076 561 17 79',
   // TODO: bestätigen, dass die Nummer auf WhatsApp erreichbar ist
@@ -81,7 +81,6 @@ export type Service = {
   h1: string
   lead: string
   intro: string[]
-  includesTitle: string
   includes: string[]
   idealFor: string[]
   faqs: Faq[]
@@ -92,21 +91,20 @@ export const services: Service[] = [
     slug: 'umzugsreinigung-adliswil',
     name: 'Umzugsreinigung',
     cardTitle: 'Umzugsreinigung',
-    teaser: 'Endreinigung mit Abnahmegarantie',
+    teaser: 'Endreinigung für die Wohnungsabgabe',
     icon: 'umzug',
-    short: 'Für eine ordentliche und problemlose Wohnungsübergabe. Sorgfältige Reinigung mit Abnahmegarantie.',
+    short: 'Für eine ordentliche und problemlose Wohnungsübergabe. Sorgfältige Reinigung – auf Wunsch mit Abnahmegarantie.',
     image: 'umzug',
     imageAlt: 'Frau packt beim Umzug Kartons in einer hellen Wohnung',
-    metaTitle: 'Umzugsreinigung Adliswil mit Abnahmegarantie | Klar und Rein',
+    metaTitle: 'Umzugsreinigung Adliswil – Abnahmegarantie auf Wunsch | Klar und Rein',
     metaDescription:
-      'Umzugs- und Endreinigung in Adliswil, Langnau, Kilchberg, Thalwil und Zürich – gründlich und mit Abnahmegarantie. Jetzt kostenlose Offerte anfragen.',
-    h1: 'Umzugsreinigung in Adliswil – mit Abnahmegarantie',
-    lead: 'Sie ziehen um, wir kümmern uns um die Endreinigung. So geben Sie Ihre Wohnung ohne Stress und ohne Nachreinigung an die Verwaltung zurück.',
+      'Umzugs- und Endreinigung in Adliswil, Langnau, Kilchberg, Thalwil und Zürich – gründlich, auf Wunsch mit Abnahmegarantie. Jetzt kostenlose Offerte anfragen.',
+    h1: 'Umzugsreinigung in Adliswil – Abnahmegarantie auf Wunsch',
+    lead: 'Sie ziehen um, wir kümmern uns um die Endreinigung. So geben Sie Ihre Wohnung ohne Stress an die Verwaltung zurück.',
     intro: [
       'Bei der Wohnungsabgabe schaut die Verwaltung genau hin: Backofen, Dampfabzug, Fensterfalze, Storen, Kalk im Bad. Genau dort setzen wir an. Wir reinigen Ihre Wohnung oder Ihr Haus nach der in der Schweiz üblichen Abgabe-Checkliste.',
-      'Mit unserer Abnahmegarantie sind Sie auf der sicheren Seite: Beanstandet die Verwaltung bei der Übergabe etwas an der Reinigung, reinigen wir kostenlos nach.',
+      'Auf Wunsch bieten wir eine Abnahmegarantie: Wir sind bei der Wohnungsabgabe dabei und reinigen direkt vor Ort nach, falls die Verwaltung etwas beanstandet.',
     ],
-    includesTitle: 'Das ist in der Umzugsreinigung inbegriffen',
     includes: [
       'Küche komplett: Backofen, Bleche, Kochfeld, Dampfabzug inkl. Filter, Kühlschrank, Schränke innen und aussen',
       'Bad und WC: Lavabo, Dusche, Badewanne, WC, Armaturen und Plättli – inklusive Entkalken',
@@ -125,7 +123,7 @@ export const services: Service[] = [
       },
       {
         q: 'Was bedeutet Abnahmegarantie?',
-        a: 'Beanstandet die Verwaltung bei der Wohnungsabgabe etwas an der Reinigung, reinigen wir die bemängelten Stellen kostenlos nach – bis die Wohnung abgenommen ist.',
+        a: 'Auf Wunsch sind wir bei der Wohnungsabgabe mit der Verwaltung vor Ort. Beanstandet sie etwas an der Reinigung, reinigen wir die Stellen direkt nach – bis die Wohnung abgenommen ist. Ob Sie die Abnahmegarantie möchten, halten wir in der Offerte fest.',
       },
       {
         q: 'Muss ich bei der Wohnungsabgabe dabei sein?',
@@ -155,7 +153,6 @@ export const services: Service[] = [
       'Ob wöchentlich, alle zwei Wochen oder einmalig vor einem besonderen Anlass: Wir passen die Wohnungsreinigung Ihrem Alltag an. Sie sagen uns, worauf es Ihnen ankommt, wir kümmern uns darum.',
       'Für Wohnungen, die eine Extraportion Aufmerksamkeit brauchen – etwa nach dem Winter, nach einer längeren Abwesenheit oder vor einem Einzug – bieten wir eine Tiefenreinigung an, bei der wir auch die Stellen reinigen, die im Alltag liegen bleiben.',
     ],
-    includesTitle: 'Das gehört zur Wohnungsreinigung',
     includes: [
       'Staubsaugen und feucht Aufnehmen aller Böden',
       'Küche: Arbeitsflächen, Kochfeld, Fronten, Spüle und Geräte aussen',
@@ -198,7 +195,6 @@ export const services: Service[] = [
       'Wir übernehmen die Unterhaltsreinigung von Büros, Praxen, Ateliers und kleineren Gewerberäumen in Adliswil und im ganzen Kanton Zürich. Den Umfang und die Intervalle legen wir gemeinsam mit Ihnen fest.',
       'Auf Wunsch reinigen wir früh morgens, abends oder am Wochenende – so läuft Ihr Betrieb ungestört weiter. Sie haben eine feste Ansprechperson und klare Absprachen.',
     ],
-    includesTitle: 'Das gehört zur Büroreinigung',
     includes: [
       'Arbeitsplätze, Tische und Ablagen',
       'Böden saugen und feucht reinigen',
@@ -241,7 +237,6 @@ export const services: Service[] = [
       'Saubere Fenster machen jeden Raum heller. Wir reinigen Glasflächen streifenfrei und vergessen dabei auch Rahmen, Falze und Simse nicht – dort, wo sich Staub und Schmutz am liebsten sammeln.',
       'Ob einmalig im Frühling, vor einem Anlass oder regelmässig im Abo: Wir reinigen Fenster in Wohnungen, Häusern, Büros und Ladenlokalen in Adliswil und im ganzen Kanton Zürich.',
     ],
-    includesTitle: 'Das gehört zur Fensterreinigung',
     includes: [
       'Glasflächen innen und aussen streifenfrei',
       'Fensterrahmen, Falze und Dichtungen',
@@ -284,7 +279,6 @@ export const services: Service[] = [
       'Bei der Unterhaltsreinigung legen wir gemeinsam fest, was wie oft gereinigt wird – täglich, wöchentlich oder in einem anderen Rhythmus. So bleiben Büros, Praxen, Geschäfte und Gemeinschaftsflächen dauerhaft gepflegt.',
       'Sie haben eine feste Ansprechperson, klare Absprachen und auf Wunsch Reinigungszeiten ausserhalb Ihrer Öffnungs- oder Bürozeiten.',
     ],
-    includesTitle: 'Das gehört zur Unterhaltsreinigung',
     includes: [
       'Individueller Reinigungsplan mit festen Intervallen',
       'Böden saugen und feucht reinigen',
@@ -323,7 +317,6 @@ export const services: Service[] = [
       'Für Verwaltungen, Eigentümergemeinschaften und private Vermieter übernehmen wir die regelmässige Reinigung von Treppenhäusern und Allgemeinflächen in Adliswil und Umgebung.',
       'Sie bestimmen das Intervall – wöchentlich, alle zwei Wochen oder monatlich. Wir sorgen dafür, dass sich Mieterinnen, Mieter und Besuch wohlfühlen.',
     ],
-    includesTitle: 'Das gehört zur Treppenhausreinigung',
     includes: [
       'Treppen und Podeste saugen und feucht reinigen',
       'Geländer, Handläufe und Fenstersimse',
@@ -362,7 +355,6 @@ export const services: Service[] = [
       'Für Verwaltungen, Eigentümergemeinschaften und private Vermieter übernehmen wir die Hauswartung von Mehrfamilienhäusern und Geschäftsliegenschaften in Adliswil und Umgebung.',
       'Den Umfang stellen wir individuell zusammen – von der regelmässigen Treppenhausreinigung über die Umgebungspflege bis zum Winterdienst. So bleibt Ihre Liegenschaft das ganze Jahr gepflegt.',
     ],
-    includesTitle: 'Das kann zur Hauswartung gehören',
     includes: [
       'Reinigung von Treppenhaus, Lift, Keller und Waschküche',
       'Umgebungspflege: Rasen, Hecken, Laub und Wege',
@@ -401,7 +393,6 @@ export const services: Service[] = [
       'Ob Neubau, Umbau, Renovation oder neue Küche: Wir reinigen nach den Handwerkern, damit Sie oder Ihre Mieterschaft direkt einziehen können.',
       'Wir arbeiten mit Bauherrschaften, Handwerksbetrieben und Privatpersonen zusammen und stimmen den Termin auf den Bauablauf ab.',
     ],
-    includesTitle: 'Das gehört zur Baureinigung',
     includes: [
       'Grobreinigung: Bauschutt-Reste, Staub und Verpackungsmaterial entfernen',
       'Feinreinigung aller Oberflächen, Schränke und Einbauten',
@@ -440,7 +431,6 @@ export const services: Service[] = [
       'Mit der Zeit setzen sich auf Terrassen, Wegen und Einfahrten Moos, Algen und Schmutz fest. Das sieht nicht nur unschön aus, sondern macht Flächen auch rutschig.',
       'Wir reinigen mit Hochdruck und Flächenreinigern und passen Druck und Verfahren an das Material an – ob Stein, Beton, Platten oder Holz.',
     ],
-    includesTitle: 'Das reinigen wir mit Hochdruck',
     includes: [
       'Terrassen, Sitzplätze und Balkone',
       'Plattenwege, Einfahrten und Vorplätze',
@@ -479,7 +469,6 @@ export const services: Service[] = [
       'Wetter, Verkehr und Feuchtigkeit hinterlassen Spuren: Grauschleier, Algen und Grünbelag lassen Fassaden schnell alt aussehen.',
       'Vor der Reinigung prüfen wir die Fassade und wählen ein schonendes Verfahren – für Putz, Klinker, Holz, Metall oder Glas. So wird das Gebäude sauber, ohne die Oberfläche zu belasten.',
     ],
-    includesTitle: 'Das gehört zur Fassadenreinigung',
     includes: [
       'Besichtigung und Prüfung der Fassade',
       'Entfernen von Algen, Grünbelag und Grauschleier',
@@ -517,11 +506,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: 'Was bedeutet Abnahmegarantie bei der Umzugsreinigung?',
-    a: 'Beanstandet die Verwaltung bei der Wohnungsabgabe etwas an der Reinigung, reinigen wir kostenlos nach, bis die Wohnung abgenommen ist.',
-  },
-  {
-    q: 'Bringen Sie Reinigungsmittel und Geräte mit?',
-    a: 'Ja, wir bringen alle nötigen Reinigungsmittel, Geräte und Materialien mit. Sie müssen nichts vorbereiten.',
+    a: 'Die Abnahmegarantie gibt es auf Wunsch: Wir sind bei der Wohnungsabgabe dabei und reinigen direkt nach, falls die Verwaltung etwas beanstandet – bis die Wohnung abgenommen ist.',
   },
   {
     q: 'Wie komme ich zu einer Offerte?',
@@ -529,7 +514,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: 'Welche Reinigungen bietet Klar und Rein an?',
-    a: 'Umzugsreinigung mit Abnahmegarantie, Wohnungs- und Tiefenreinigung, Büroreinigung, Fensterreinigung, Unterhaltsreinigung, Treppenhausreinigung, Hauswartung, Baureinigung, Hochdruckreinigung und Fassadenreinigung – für Privat- und Geschäftskunden in Adliswil und im ganzen Kanton Zürich.',
+    a: 'Umzugsreinigung (auf Wunsch mit Abnahmegarantie), Wohnungs- und Tiefenreinigung, Büroreinigung, Fensterreinigung, Unterhaltsreinigung, Treppenhausreinigung, Hauswartung, Baureinigung, Hochdruckreinigung und Fassadenreinigung – für Privat- und Geschäftskunden in Adliswil und im ganzen Kanton Zürich.',
   },
   {
     q: 'Reinigen Sie auch regelmässig für Firmen und Verwaltungen?',
@@ -556,25 +541,19 @@ export const heroCards = [
   },
 ]
 
-/** Kennzahlen der bisherigen Website. TODO: Bedeutung von Esma bestätigen lassen */
-export const stats = [
-  { value: '120+', label: 'Qualitätsdienstleistungen' },
-  { value: '15', label: 'Von vielen vertraut' },
-]
-
 /** Versprechen (ersetzt die Vorlagen-Bewertungen der alten Seite, bis echte Google-Bewertungen da sind) */
 export const promises = [
-  { title: 'Abnahmegarantie', text: 'Bei der Umzugsreinigung reinigen wir kostenlos nach, falls die Verwaltung etwas beanstandet.' },
+  { title: 'Abnahmegarantie auf Wunsch', text: 'Bei der Umzugsreinigung sind wir auf Wunsch bei der Übergabe dabei und reinigen direkt nach, falls etwas beanstandet wird.' },
   { title: 'Pünktlich & zuverlässig', text: 'Wir kommen zum vereinbarten Termin und halten uns an klare Absprachen.' },
-  { title: 'Alles inklusive', text: 'Reinigungsmittel, Geräte und Material bringen wir mit. Sie müssen nichts vorbereiten.' },
+  { title: 'Flexibel nach Absprache', text: 'Umfang, Termin und Reinigungsmittel richten sich nach Ihnen – mit unserem Material oder Ihrem eigenen.' },
   { title: 'Kostenlose Offerte', text: 'Sie wissen vorher genau, was die Reinigung kostet – transparent und unverbindlich.' },
 ]
 
 export const steps = [
   { title: 'Anfrage', text: 'Formular, Anruf oder WhatsApp – sagen Sie uns kurz, was gereinigt werden soll.' },
   { title: 'Offerte', text: 'Nach kurzer Besichtigung oder anhand von Fotos erhalten Sie eine klare, kostenlose Offerte.' },
-  { title: 'Reinigung', text: 'Wir kommen pünktlich zum vereinbarten Termin und bringen alles Nötige mit.' },
-  { title: 'Abnahme', text: 'Sie prüfen das Ergebnis. Bei der Umzugsreinigung gilt unsere Abnahmegarantie.' },
+  { title: 'Reinigung', text: 'Wir kommen pünktlich zum vereinbarten Termin und reinigen genau nach Ihren Wünschen.' },
+  { title: 'Abnahme', text: 'Sie prüfen das Ergebnis. Bei der Umzugsreinigung sind wir auf Wunsch bei der Abnahme dabei.' },
 ]
 
 /** Weiche Trennstellen («…reinigung», «…wartung», «Abnahmegarantie»), damit lange Wörter auf kleinen Kacheln sauber umbrechen */

@@ -229,10 +229,10 @@ export default function Header() {
                 <img src={`/images/${featured.image}.webp`} alt="" width={800} height={600} loading="lazy" className="absolute inset-0 -z-20 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <span aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950/95 via-navy-950/50 to-transparent" />
                 <span className="mb-auto inline-flex w-fit items-center gap-1.5 rounded-full bg-brand-500 px-3 py-1 text-xs font-semibold">
-                  <ShieldCheck className="size-3.5" aria-hidden /> Abnahmegarantie
+                  <ShieldCheck className="size-3.5" aria-hidden /> Abnahmegarantie auf Wunsch
                 </span>
                 <span className="text-xl font-semibold">Umzugsreinigung ohne Stress</span>
-                <span className="mt-1 text-sm text-white/80">Bemängelt die Verwaltung etwas, reinigen wir kostenlos nach.</span>
+                <span className="mt-1 text-sm text-white/80">Auf Wunsch sind wir bei der Übergabe dabei und reinigen direkt nach.</span>
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium">
                   Mehr erfahren <ArrowUpRight className="size-4" aria-hidden />
                 </span>

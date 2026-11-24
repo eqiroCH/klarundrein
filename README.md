@@ -33,13 +33,13 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 
 ## Offene Punkte (vom Kunden bestätigen lassen)
 
-- [ ] Name der Geschäftsführung fürs Impressum (`company.manager`)
-- [ ] Telefonnummer 076 561 17 79 auch auf WhatsApp erreichbar?
+- [x] Impressum: Arxhend Hoxha, Geschäftsführer und Inhaber
+- [x] 076 561 17 79 ist auch auf WhatsApp erreichbar
 - [ ] Echte Fotos (Team, Auto, Vorher/Nachher) – aktuell die Stockfotos der bisherigen Website
-- [ ] Kennzahlen «120+ Qualitätsdienstleistungen» und «15 Von vielen vertraut» (von der alten Seite übernommen): Bedeutung bestätigen oder ersetzen (`stats`)
-- [ ] Bedingungen der Abnahmegarantie bestätigen (Text: kostenlose Nachreinigung bei Beanstandung)
-- [ ] Leistungsumfang je Leistung prüfen (v. a. Umzugsreinigung: Fenster/Storen, Keller/Estrich)
-- [ ] Reinigungsmittel/Geräte werden mitgebracht? (FAQ)
+- [x] Kennzahlen «120+» und «15» der alten Seite entfernt (Esma kannte die Bedeutung nicht)
+- [x] Abnahmegarantie nur auf Wunsch: dabei bei der Wohnungsabgabe, Nachreinigung vor Ort (ob kostenlos, noch offen)
+- [x] Leistungen als «Leistungen nach Wahl» + «Weitere Leistungen nach Absprache möglich» (Wunsch von Esma)
+- [x] Reinigungsmittel: je nach Kunde – Aussage «bringen alles mit» entfernt
 - [x] Einzugsgebiet: an Esmas Google-Profil angeglichen (inkl. Wädenswil, Richterswil, Wollerau)
 - [x] Öffnungszeiten: Mo–Fr 07:30–18:00 (aus dem Google-Profil, `company.hours`, Schema)
 - [ ] Umfang der neuen Leistungen bestätigen (Fenster, Unterhalt, Hauswartung inkl. Winterdienst, Hochdruck, Fassade) – Texte sind Vorschläge; Fotos sind Unsplash-Platzhalter

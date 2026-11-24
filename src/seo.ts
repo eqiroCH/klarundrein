@@ -4,12 +4,12 @@ import { company, services } from './data/site'
 export type PageMeta = { title: string; description: string; noindex?: boolean }
 
 const HOME_DESCRIPTION =
-  'Reinigungsfirma in Adliswil: Umzugsreinigung mit Abnahmegarantie, Wohnungs-, Büro-, Treppenhaus- und Baureinigung in Adliswil, Langnau, Kilchberg, Thalwil und Zürich. Kostenlose Offerte.'
+  'Reinigungsfirma in Adliswil: Umzugsreinigung (Abnahmegarantie auf Wunsch), Wohnungs-, Büro-, Fenster- und Treppenhausreinigung, Hauswartung und mehr in Adliswil, Thalwil, Horgen und Zürich. Kostenlose Offerte.'
 
 /** Meta-Daten pro Route – wird im Browser (useSeo) und beim Prerendern (scripts/prerender.mjs) verwendet. */
 export const pages: Record<string, PageMeta> = {
   '/': {
-    title: 'Reinigungsfirma Adliswil – Umzugsreinigung mit Abnahmegarantie | Klar und Rein',
+    title: 'Reinigungsfirma Adliswil – Umzugs-, Wohnungs- & Büroreinigung | Klar und Rein',
     description: HOME_DESCRIPTION,
   },
   ...Object.fromEntries(
