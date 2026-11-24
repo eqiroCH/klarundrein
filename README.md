@@ -40,10 +40,25 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [ ] Bedingungen der Abnahmegarantie bestätigen (Text: kostenlose Nachreinigung bei Beanstandung)
 - [ ] Leistungsumfang je Leistung prüfen (v. a. Umzugsreinigung: Fenster/Storen, Keller/Estrich)
 - [ ] Reinigungsmittel/Geräte werden mitgebracht? (FAQ)
-- [ ] Einzugsgebiet bestätigen (Liste in `areas`)
+- [x] Einzugsgebiet: an Esmas Google-Profil angeglichen (inkl. Wädenswil, Richterswil, Wollerau)
+- [x] Öffnungszeiten: Mo–Fr 07:30–18:00 (aus dem Google-Profil, `company.hours`, Schema)
 - [ ] Umfang der neuen Leistungen bestätigen (Fenster, Unterhalt, Hauswartung inkl. Winterdienst, Hochdruck, Fassade) – Texte sind Vorschläge; Fotos sind Unsplash-Platzhalter
 - [ ] Maler/Renovation (laut Handelsregister-Zweck) auch anbieten? → ggf. eigene Seite
 - [ ] Echte Google-Bewertungen einbinden, sobald vorhanden. Die Vorlagen-Bewertungen der alten Seite («Lisa B.», «Sarah R.») wurden bewusst nicht übernommen, an ihrer Stelle steht der Bereich «Darauf können Sie sich verlassen»
-- [ ] Netlify: Formular-Benachrichtigung an info@klarundrein.ch einrichten (Site settings → Forms → Notifications)
-- [ ] Domain klarundrein.ch (Infomaniak, DNS aktuell bei Hostinger) auf Netlify zeigen lassen – **MX-Records/E-Mail vorher klären**
-- [ ] Google Search Console + Unternehmensprofil einrichten, Sitemap einreichen
+- [x] Google-Unternehmensprofil: von Esma erstellt und verifiziert, Lion ist Administrator
+- [ ] Google-Profil optimieren (Kategorien, Leistungen, Beschreibung), local.ch/search.ch, Bing Places, Cylex korrigieren
+
+## Bewertungen
+
+`design/bewertung/`: QR-Code und Bewertungskarte (85 × 55 mm, 3 mm Beschnitt, 300 dpi) für den Google-Bewertungslink https://g.page/r/CRP9dkwBEaVrEAI/review
+
+## Go-live (später)
+
+Die Website läuft am Schluss **bei Klar und Rein**, nicht bei Eqiro: Domain, E-Mail und Hosting im Infomaniak-Konto der Kundin, Eqiro bekommt Zugang als eingeladener Benutzer. Netlify ist nur die Vorschau.
+
+- [ ] Seite hosting-unabhängig machen: Netlify Forms ersetzen (Anfragen an info@klarundrein.ch), saubere URLs ohne Server-Konfiguration, Weiterleitungen aus `netlify.toml` als `.htaccess`, Datenschutz auf Infomaniak (Schweiz) anpassen
+- [ ] Hosting: Infomaniak Starter (gratis zur Domain, 10 MB, statisch) – Seite hat ca. 5 MB
+- [ ] Vor dem Umstellen der Nameserver (aktuell Hostinger) MX/SPF/DKIM in der Infomaniak-DNS-Zone prüfen
+- [ ] Deploy per GitHub Action (FTP) auf das Kunden-Hosting, eigener FTP-Benutzer für Eqiro
+- [ ] Google Search Console + Bing Webmaster Tools, Sitemap einreichen
+- [ ] Übergabe: Zugänge, Code als ZIP + schriftlich, dass er der Kundin gehört; Netlify-Projekt löschen

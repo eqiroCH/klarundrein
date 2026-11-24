@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, Clock3, Mail, MapPin, Phone } from 'lucide-react'
 import Logo from './Logo'
 import { Instagram, Sparkle } from './Icons'
 import { company, phoneHref, services } from '../data/site'
@@ -96,6 +96,14 @@ export default function Footer() {
                 <a href={`mailto:${company.email}`} className="flex gap-3 hover:text-white">
                   <Mail className="size-5 shrink-0 text-brand-200" aria-hidden /> {company.email}
                 </a>
+              </p>
+              <p className="flex gap-3">
+                <Clock3 className="mt-0.5 size-5 shrink-0 text-brand-200" aria-hidden />
+                <span>
+                  {company.hours.short}
+                  <br />
+                  <span className="text-white/70">Sa & So geschlossen</span>
+                </span>
               </p>
             </address>
           </div>

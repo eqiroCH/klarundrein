@@ -19,6 +19,8 @@ export const company = {
   instagram: 'https://www.instagram.com/klar.und.rein.gmbh/',
   url: 'https://klarundrein.ch',
   geo: { lat: 47.31067, lng: 8.522645 },
+  /** Öffnungszeiten wie im Google-Unternehmensprofil */
+  hours: { short: 'Mo–Fr 07:30–18:00', long: 'Montag bis Freitag, 07:30–18:00 Uhr', closed: 'Samstag und Sonntag geschlossen' },
 }
 
 const digits = company.phone.replace(/\D/g, '').replace(/^0/, '41')
@@ -34,10 +36,14 @@ export const areas = [
   'Kilchberg',
   'Rüschlikon',
   'Thalwil',
-  'Horgen',
   'Oberrieden',
-  'Zürich-Wollishofen',
+  'Horgen',
+  'Au (Wädenswil)',
+  'Wädenswil',
+  'Richterswil',
+  'Wollerau',
   'Zürich-Leimbach',
+  'Zürich-Wollishofen',
   'Zürich-Enge',
   'Stadt Zürich',
 ] as const
@@ -499,7 +505,11 @@ export const services: Service[] = [
 export const generalFaqs: Faq[] = [
   {
     q: 'In welchen Orten reinigt Klar und Rein?',
-    a: 'Unser Sitz ist an der Haldenstrasse 11 in Adliswil. Wir reinigen in Adliswil und den umliegenden Gemeinden wie Langnau am Albis, Kilchberg, Rüschlikon, Thalwil, Horgen und Oberrieden, in der Stadt Zürich sowie im ganzen Kanton Zürich.',
+    a: 'Unser Sitz ist an der Haldenstrasse 11 in Adliswil. Wir reinigen in Adliswil und den umliegenden Gemeinden wie Langnau am Albis, Kilchberg, Rüschlikon, Thalwil, Oberrieden und Horgen, am linken Zürichseeufer bis Wädenswil, Richterswil und Wollerau, in der Stadt Zürich sowie im ganzen Kanton Zürich.',
+  },
+  {
+    q: 'Wann ist Klar und Rein erreichbar?',
+    a: 'Wir sind von Montag bis Freitag zwischen 07:30 und 18:00 Uhr für Sie da – telefonisch, per WhatsApp oder über das Anfrageformular. Samstag und Sonntag ist geschlossen.',
   },
   {
     q: 'Was kostet eine Reinigung?',

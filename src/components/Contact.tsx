@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Check, Loader2, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
+import { ArrowRight, Check, Clock3, Loader2, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import Reveal from './Reveal'
 import { Eyebrow } from './Icons'
 import { company, phoneHref, services, whatsappHref } from '../data/site'
@@ -86,14 +86,24 @@ export default function Contact({ preset }: { preset?: string }) {
                 </li>
               ))}
             </ul>
-            <p className="mt-auto flex items-start gap-3 pt-10 text-sm text-white/70">
-              <MapPin className="size-5 shrink-0 text-brand-300" aria-hidden />
-              <span>
-                {company.name}
-                <br />
-                {company.street}, {company.zip} {company.city}
-              </span>
-            </p>
+            <div className="mt-auto grid gap-3 pt-10 text-sm text-white/70">
+              <p className="flex items-start gap-3">
+                <Clock3 className="size-5 shrink-0 text-brand-300" aria-hidden />
+                <span>
+                  {company.hours.long}
+                  <br />
+                  {company.hours.closed}
+                </span>
+              </p>
+              <p className="flex items-start gap-3">
+                <MapPin className="size-5 shrink-0 text-brand-300" aria-hidden />
+                <span>
+                  {company.name}
+                  <br />
+                  {company.street}, {company.zip} {company.city}
+                </span>
+              </p>
+            </div>
           </div>
 
           {/* Rechte Spalte: Formular */}
