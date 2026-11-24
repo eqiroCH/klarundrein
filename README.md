@@ -50,7 +50,7 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [x] Google-Unternehmensprofil: von Esma erstellt und verifiziert, Lion ist Administrator
 - [x] Google-Profil optimiert (24.11.2026): Kategorien, 10 Leistungen mit Beschreibung, Beschreibung, Einzugsgebiet, Öffnungszeiten, Instagram, WhatsApp
 - [x] Antworten auf alle 5 Google-Bewertungen gepostet (24.11.2026)
-- [ ] Google-Profil: Logo ersetzen (`design/google/logo-google.png`, das alte ist abgeschnitten) und Titelbild durch echtes Foto ersetzen (`design/google/titelbild-google.jpg`)
+- [x] Google-Profil: Logo ersetzt (`design/google/logo-google.png`, das alte war abgeschnitten) und Titelbild durch echtes Foto ersetzt (`design/google/titelbild-google.jpg`)
 - [x] Cylex: Korrektur eingereicht (24.11.2026, Rückfragen an info@klarundrein.ch), falsche Nummer 052 707 25 62 entfernen. Cylex hat sie aus dem Unsplash-Dateinamen der alten Seite gelesen (`photo-1760527072562`). Korrektur über «Fehlerhafte Daten melden»
 - [ ] Termin mit Esma (ca. 10 Min.): Bing Places mit **Esmas** Google-Konto anmelden und aus dem Google-Profil importieren, dazu local.ch (Code geht an Esmas Nummer)
 - [ ] search.ch und Ofri prüfen
