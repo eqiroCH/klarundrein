@@ -49,7 +49,11 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [ ] Echte Google-Bewertungen einbinden, sobald vorhanden. Die Vorlagen-Bewertungen der alten Seite («Lisa B.», «Sarah R.») wurden bewusst nicht übernommen, an ihrer Stelle steht der Bereich «Darauf können Sie sich verlassen»
 - [x] Google-Unternehmensprofil: von Esma erstellt und verifiziert, Lion ist Administrator
 - [x] Google-Profil optimiert (24.11.2026): Kategorien, 10 Leistungen mit Beschreibung, Beschreibung, Einzugsgebiet, Öffnungszeiten, Instagram, WhatsApp
-- [ ] Logo im Google-Profil, local.ch (Code von Esma), Bing Places (Import aus Google), Cylex-Nummer korrigieren, search.ch/Ofri prüfen
+- [x] Antworten auf alle 5 Google-Bewertungen gepostet (24.11.2026)
+- [ ] Google-Profil: Logo ersetzen (`design/google/logo-google.png`, das alte ist abgeschnitten) und Titelbild durch echtes Foto ersetzen (`design/google/titelbild-google.jpg`)
+- [ ] Cylex: falsche Nummer 052 707 25 62 entfernen. Cylex hat sie aus dem Unsplash-Dateinamen der alten Seite gelesen (`photo-1760527072562`). Korrektur über «Fehlerhafte Daten melden»
+- [ ] Bing Places: mit Google anmelden, aus dem Google-Profil importieren
+- [ ] local.ch (Code geht an Esma), search.ch/Ofri prüfen
 
 ## Bewertungen
 
