@@ -118,7 +118,7 @@ export default function ServicePage({ service: s }: { service: Service }) {
                 </span>
                 <p>
                   <strong className="block text-lg font-semibold">Abnahmegarantie auf Wunsch</strong>
-                  <span className="text-white/75">Wir sind bei der Wohnungsabgabe dabei und reinigen direkt nach, falls die Verwaltung etwas beanstandet.</span>
+                  <span className="text-white/75">Wir sind bei der Wohnungsabgabe dabei und reinigen direkt nach, falls die Verwaltung etwas beanstandet. Als Zusatzleistung – der Preis steht in Ihrer Offerte.</span>
                 </p>
               </div>
             )}

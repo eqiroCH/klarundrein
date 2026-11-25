@@ -28,8 +28,9 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 ## Bilder & Video
 
 - Fotos und Hero-Video stammen von der bisherigen Website (Unsplash bzw. Pexels, beide frei nutzbar) und liegen optimiert als WebP/MP4 in `public/images/`
-- **Echte Fotos von Klar und Rein** (Instagram @klar.und.rein.gmbh, Nov. 2026): `umzug*` (Küche nach Umzugsreinigung), `fenster*` (Fenstertür in Horgen), `hochdruck*` (Deckenreinigung mit Hochdruck) sowie die Galerie «Einblicke» auf der Startseite (`einsatz-*.webp`, inkl. Vorher/Nachher Fensterrahmen)
-- Noch Platzhalter (Unsplash/alte Seite): Wohnung, Büro, Treppenhaus, Bau, Unterhalt, Hauswartung, Fassade, Über uns, Hero
+- **Echte Fotos von Klar und Rein** (Instagram @klar.und.rein.gmbh, Nov. 2026): `umzug*` (Küche nach Umzugsreinigung), `fenster*` (Fenstertür in Horgen), `hochdruck*` (Deckenreinigung mit Hochdruck) sowie die Galerie «Einblicke» auf der Startseite (`einsatz-*.webp`, Vorher/Nachher Lichtschacht von Esma)
+- `unterhalt*` (Eingangsbereich mit Parkett) und Lichtschacht vorher/nachher: Fotos von Esma per WhatsApp (25.11.2026)
+- Noch Platzhalter (Unsplash/alte Seite): Wohnung, Büro, Treppenhaus, Bau, Hauswartung, Fassade, Über uns, Hero
 - Das Hero-Video ist ein 12-Sekunden-Ausschnitt (720p, ca. 0.8 MB). Es lädt erst im Browser und nicht bei «Bewegung reduzieren» oder Datensparmodus, das Standbild `hero.webp` ist das LCP-Bild
 - Original-Logo: `design/logo-original.png`
 
@@ -39,13 +40,14 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [x] 076 561 17 79 ist auch auf WhatsApp erreichbar
 - [ ] Weitere echte Fotos (Team, Treppenhaus, Büro, Hauswartung, Fassade) – Umzug, Fenster, Hochdruck und die Galerie «Einblicke» sind schon echt (Instagram)
 - [x] Kennzahlen «120+» und «15» der alten Seite entfernt (Esma kannte die Bedeutung nicht)
-- [x] Abnahmegarantie nur auf Wunsch: dabei bei der Wohnungsabgabe, Nachreinigung vor Ort (ob kostenlos, noch offen)
+- [x] Abnahmegarantie nur auf Wunsch und als Zusatzleistung (nicht gratis, Preis in der Offerte), laut Esma 25.11.2026
 - [x] Leistungen als «Leistungen nach Wahl» + «Weitere Leistungen nach Absprache möglich» (Wunsch von Esma)
 - [x] Reinigungsmittel: je nach Kunde – Aussage «bringen alles mit» entfernt
 - [x] Einzugsgebiet: an Esmas Google-Profil angeglichen (inkl. Wädenswil, Richterswil, Wollerau)
 - [x] Öffnungszeiten: Mo–Fr 07:30–18:00 (aus dem Google-Profil, `company.hours`, Schema)
 - [ ] Umfang der neuen Leistungen bestätigen (Fenster, Unterhalt, Hauswartung inkl. Winterdienst, Hochdruck, Fassade) – Texte sind Vorschläge; Fotos für Unterhalt, Hauswartung und Fassade sind noch Unsplash-Platzhalter
-- [ ] Maler/Renovation (laut Handelsregister-Zweck) auch anbieten? → ggf. eigene Seite
+- [x] Maler/Renovation: bieten sie nur nebenbei an, keine eigene Seite – Fokus auf Reinigung (Esma, 25.11.2026)
+- [x] Winterdienst/Schneeräumen entfernt (Esma, 25.11.2026), dafür Lichtschachtreinigung bei der Hauswartung. **Im Google-Profil steht bei «Hauswartungsservice» noch «Winterdienst» → beim nächsten Google-Check ändern**
 - [ ] Echte Google-Bewertungen einbinden, sobald vorhanden. Die Vorlagen-Bewertungen der alten Seite («Lisa B.», «Sarah R.») wurden bewusst nicht übernommen, an ihrer Stelle steht der Bereich «Darauf können Sie sich verlassen»
 - [x] Google-Unternehmensprofil: von Esma erstellt und verifiziert, Lion ist Administrator
 - [x] Google-Profil optimiert (24.11.2026): Kategorien, 10 Leistungen mit Beschreibung, Beschreibung, Einzugsgebiet, Öffnungszeiten, Instagram, WhatsApp

@@ -34,19 +34,19 @@ export default function Einblicke() {
         </Reveal>
 
         <ul className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-          {/* Vorher / Nachher: Fensterrahmen bei einer Umzugsreinigung */}
+          {/* Vorher / Nachher: Lichtschachtreinigung (Foto von Esma) */}
           <Reveal as="li" className="col-span-2 lg:row-span-2">
-            <figure className="relative grid aspect-[4/3] h-full grid-cols-2 gap-1.5 overflow-hidden rounded-3xl bg-navy-950 lg:aspect-auto">
+            <figure className="relative grid aspect-square h-full grid-rows-2 gap-1.5 overflow-hidden rounded-3xl bg-navy-950 lg:aspect-auto">
               {[
-                { src: 'einsatz-vorher', label: 'Vorher', alt: 'Fensterrahmen vor der Reinigung mit Schmutz und Ablagerungen', tone: 'bg-white text-navy-950' },
-                { src: 'einsatz-nachher', label: 'Nachher', alt: 'Derselbe Fensterbereich nach der Reinigung durch Klar und Rein', tone: 'bg-brand-500 text-white' },
+                { src: 'einsatz-lichtschacht-vorher', label: 'Vorher', alt: 'Lichtschacht vor der Reinigung mit Moos, Algen und Laub', tone: 'bg-white text-navy-950' },
+                { src: 'einsatz-lichtschacht-nachher', label: 'Nachher', alt: 'Derselbe Lichtschacht nach der Reinigung durch Klar und Rein', tone: 'bg-brand-500 text-white' },
               ].map((p) => (
                 <div key={p.src} className="relative min-h-0">
                   <img
                     src={`/images/${p.src}.webp`}
                     alt={p.alt}
-                    width={560}
-                    height={1100}
+                    width={1200}
+                    height={600}
                     loading="lazy"
                     decoding="async"
                     className="size-full object-cover"
@@ -54,7 +54,7 @@ export default function Einblicke() {
                   <span className={`${pill} ${p.tone}`}>{p.label}</span>
                 </div>
               ))}
-              <figcaption className={caption}>Fensterrahmen bei einer Umzugsreinigung</figcaption>
+              <figcaption className={caption}>Lichtschachtreinigung</figcaption>
             </figure>
           </Reveal>
 

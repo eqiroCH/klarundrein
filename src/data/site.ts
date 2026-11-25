@@ -103,7 +103,7 @@ export const services: Service[] = [
     lead: 'Sie ziehen um, wir kümmern uns um die Endreinigung. So geben Sie Ihre Wohnung ohne Stress an die Verwaltung zurück.',
     intro: [
       'Bei der Wohnungsabgabe schaut die Verwaltung genau hin: Backofen, Dampfabzug, Fensterfalze, Storen, Kalk im Bad. Genau dort setzen wir an. Wir reinigen Ihre Wohnung oder Ihr Haus nach der in der Schweiz üblichen Abgabe-Checkliste.',
-      'Auf Wunsch bieten wir eine Abnahmegarantie: Wir sind bei der Wohnungsabgabe dabei und reinigen direkt vor Ort nach, falls die Verwaltung etwas beanstandet.',
+      'Auf Wunsch bieten wir eine Abnahmegarantie als Zusatzleistung: Wir sind bei der Wohnungsabgabe dabei und reinigen direkt vor Ort nach, falls die Verwaltung etwas beanstandet.',
     ],
     includes: [
       'Küche komplett: Backofen, Bleche, Kochfeld, Dampfabzug inkl. Filter, Kühlschrank, Schränke innen und aussen',
@@ -123,7 +123,7 @@ export const services: Service[] = [
       },
       {
         q: 'Was bedeutet Abnahmegarantie?',
-        a: 'Auf Wunsch sind wir bei der Wohnungsabgabe mit der Verwaltung vor Ort. Beanstandet sie etwas an der Reinigung, reinigen wir die Stellen direkt nach – bis die Wohnung abgenommen ist. Ob Sie die Abnahmegarantie möchten, halten wir in der Offerte fest.',
+        a: 'Auf Wunsch sind wir bei der Wohnungsabgabe mit der Verwaltung vor Ort. Beanstandet sie etwas an der Reinigung, reinigen wir die Stellen direkt nach – bis die Wohnung abgenommen ist. Die Abnahmegarantie ist eine Zusatzleistung, die Sie nach Wunsch dazunehmen – den Preis dafür halten wir in Ihrer Offerte fest.',
       },
       {
         q: 'Muss ich bei der Wohnungsabgabe dabei sein?',
@@ -269,7 +269,7 @@ export const services: Service[] = [
     icon: 'unterhalt',
     short: 'Regelmässige Reinigung nach festem Plan – für Firmen, Praxen und Liegenschaften.',
     image: 'unterhalt',
-    imageAlt: 'Boden eines hellen Gangs wird mit dem Wischmopp gereinigt',
+    imageAlt: 'Gereinigter Eingangsbereich mit Parkettboden und Einbauschrank nach der Unterhaltsreinigung durch Klar und Rein',
     metaTitle: 'Unterhaltsreinigung Adliswil – regelmässig nach Plan | Klar und Rein',
     metaDescription:
       'Unterhaltsreinigung in Adliswil und im Kanton Zürich: regelmässige Reinigung von Büros, Praxen, Geschäften und Liegenschaften nach festem Plan. Offerte anfragen.',
@@ -341,24 +341,24 @@ export const services: Service[] = [
     slug: 'hauswartung-adliswil',
     name: 'Hauswartung',
     cardTitle: 'Hauswartung',
-    teaser: 'Treppenhaus, Umgebung, Winterdienst',
+    teaser: 'Treppenhaus, Umgebung, Lichtschächte',
     icon: 'hauswartung',
-    short: 'Rundum gepflegte Liegenschaften – vom Treppenhaus über die Umgebung bis zum Winterdienst.',
+    short: 'Rundum gepflegte Liegenschaften – vom Treppenhaus über Keller und Lichtschächte bis zur Umgebung.',
     image: 'hauswartung',
     imageAlt: 'Hauswart pflegt den Rasen vor einem Wohnhaus',
-    metaTitle: 'Hauswartung Adliswil – Treppenhaus, Umgebung, Winterdienst | Klar und Rein',
+    metaTitle: 'Hauswartung Adliswil – Treppenhaus, Umgebung, Lichtschächte | Klar und Rein',
     metaDescription:
-      'Hauswartung in Adliswil und Umgebung für Verwaltungen, STWEG und Vermieter: Treppenhausreinigung, Umgebungspflege, Winterdienst und Kontrollgänge aus einer Hand.',
+      'Hauswartung in Adliswil und Umgebung für Verwaltungen, STWEG und Vermieter: Treppenhausreinigung, Umgebungspflege, Lichtschachtreinigung und Kontrollgänge aus einer Hand.',
     h1: 'Hauswartung in Adliswil',
-    lead: 'Eine Ansprechperson für Ihre Liegenschaft: Wir kümmern uns um Sauberkeit, Umgebung und Winterdienst – zuverlässig und im vereinbarten Rhythmus.',
+    lead: 'Eine Ansprechperson für Ihre Liegenschaft: Wir kümmern uns um Sauberkeit, Umgebung und Kontrollgänge – zuverlässig und im vereinbarten Rhythmus.',
     intro: [
       'Für Verwaltungen, Eigentümergemeinschaften und private Vermieter übernehmen wir die Hauswartung von Mehrfamilienhäusern und Geschäftsliegenschaften in Adliswil und Umgebung.',
-      'Den Umfang stellen wir individuell zusammen – von der regelmässigen Treppenhausreinigung über die Umgebungspflege bis zum Winterdienst. So bleibt Ihre Liegenschaft das ganze Jahr gepflegt.',
+      'Den Umfang stellen wir individuell zusammen – von der regelmässigen Treppenhausreinigung über die Lichtschachtreinigung bis zur Umgebungspflege. So bleibt Ihre Liegenschaft das ganze Jahr gepflegt.',
     ],
     includes: [
       'Reinigung von Treppenhaus, Lift, Keller und Waschküche',
       'Umgebungspflege: Rasen, Hecken, Laub und Wege',
-      'Winterdienst: Schneeräumung und Streuen',
+      'Lichtschächte reinigen: Laub, Schmutz, Moos und Algen entfernen',
       'Bereitstellen der Abfall- und Recyclingcontainer',
       'Regelmässige Kontrollgänge',
       'Kleinere Unterhaltsarbeiten nach Absprache',
@@ -367,11 +367,11 @@ export const services: Service[] = [
     faqs: [
       {
         q: 'Was gehört alles zur Hauswartung?',
-        a: 'Das legen wir gemeinsam fest. Typisch sind Treppenhausreinigung, Umgebungspflege, Winterdienst und das Bereitstellen der Abfallcontainer. Den genauen Umfang halten wir in der Offerte fest.',
+        a: 'Das legen wir gemeinsam fest. Typisch sind Treppenhausreinigung, Umgebungspflege, Lichtschachtreinigung und das Bereitstellen der Abfallcontainer. Den genauen Umfang halten wir in der Offerte fest.',
       },
       {
-        q: 'Übernehmen Sie auch den Winterdienst?',
-        a: 'Ja, auf Wunsch räumen wir Zugänge und Wege von Schnee und streuen bei Glätte.',
+        q: 'Reinigen Sie auch Lichtschächte?',
+        a: 'Ja. Wir entfernen Laub, Schmutz, Moos und Algen aus Lichtschächten – im Rahmen der Hauswartung oder als einzelnen Auftrag nach Absprache.',
       },
     ],
   },
@@ -506,7 +506,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: 'Was bedeutet Abnahmegarantie bei der Umzugsreinigung?',
-    a: 'Die Abnahmegarantie gibt es auf Wunsch: Wir sind bei der Wohnungsabgabe dabei und reinigen direkt nach, falls die Verwaltung etwas beanstandet – bis die Wohnung abgenommen ist.',
+    a: 'Die Abnahmegarantie gibt es auf Wunsch: Wir sind bei der Wohnungsabgabe dabei und reinigen direkt nach, falls die Verwaltung etwas beanstandet – bis die Wohnung abgenommen ist. Sie ist eine Zusatzleistung, die wir in Ihrer Offerte separat aufführen.',
   },
   {
     q: 'Wie komme ich zu einer Offerte?',
