@@ -38,14 +38,14 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 
 - [x] Impressum: Arxhend Hoxha, Geschäftsführer und Inhaber
 - [x] 076 561 17 79 ist auch auf WhatsApp erreichbar
-- [ ] Weitere echte Fotos (Team, Treppenhaus, Büro, Hauswartung, Fassade) – Umzug, Fenster, Hochdruck und die Galerie «Einblicke» sind schon echt (Instagram)
+- [ ] Weitere echte Fotos (Team, Wohnung, Treppenhaus, Büro, Bau, Hauswartung, Fassade) – Umzug, Fenster, Hochdruck, Unterhalt und die Galerie «Einblicke» sind schon echt. Esma schickt mehr, sobald sie welche hat
 - [x] Kennzahlen «120+» und «15» der alten Seite entfernt (Esma kannte die Bedeutung nicht)
 - [x] Abnahmegarantie nur auf Wunsch und als Zusatzleistung (nicht gratis, Preis in der Offerte), laut Esma 25.11.2026
 - [x] Leistungen als «Leistungen nach Wahl» + «Weitere Leistungen nach Absprache möglich» (Wunsch von Esma)
 - [x] Reinigungsmittel: je nach Kunde – Aussage «bringen alles mit» entfernt
 - [x] Einzugsgebiet: an Esmas Google-Profil angeglichen (inkl. Wädenswil, Richterswil, Wollerau)
 - [x] Öffnungszeiten: Mo–Fr 07:30–18:00 (aus dem Google-Profil, `company.hours`, Schema)
-- [ ] Umfang der neuen Leistungen bestätigen (Fenster, Unterhalt, Hauswartung inkl. Winterdienst, Hochdruck, Fassade) – Texte sind Vorschläge; Fotos für Unterhalt, Hauswartung und Fassade sind noch Unsplash-Platzhalter
+- [x] Umfang der neuen Leistungen mit Esma geklärt (25.11.2026): Winterdienst raus, Lichtschachtreinigung rein
 - [x] Maler/Renovation: bieten sie nur nebenbei an, keine eigene Seite – Fokus auf Reinigung (Esma, 25.11.2026)
 - [x] Winterdienst/Schneeräumen entfernt (Esma, 25.11.2026), dafür Lichtschachtreinigung bei der Hauswartung. **Im Google-Profil steht bei «Hauswartungsservice» noch «Winterdienst» → beim nächsten Google-Check ändern**
 - [ ] Echte Google-Bewertungen einbinden, sobald vorhanden. Die Vorlagen-Bewertungen der alten Seite («Lisa B.», «Sarah R.») wurden bewusst nicht übernommen, an ihrer Stelle steht der Bereich «Darauf können Sie sich verlassen»
@@ -54,7 +54,7 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [x] Antworten auf alle 5 Google-Bewertungen gepostet (24.11.2026)
 - [x] Google-Profil: Logo ersetzt (`design/google/logo-google.png`, das alte war abgeschnitten) und Titelbild durch echtes Foto ersetzt (`design/google/titelbild-google.jpg`)
 - [x] Cylex: Korrektur eingereicht (24.11.2026, Rückfragen an info@klarundrein.ch), falsche Nummer 052 707 25 62 entfernen. Cylex hat sie aus dem Unsplash-Dateinamen der alten Seite gelesen (`photo-1760527072562`). Korrektur über «Fehlerhafte Daten melden»
-- [ ] Termin mit Esma (ca. 10 Min.): Bing Places mit **Esmas** Google-Konto anmelden und aus dem Google-Profil importieren, dazu local.ch (Code geht an Esmas Nummer)
+- [ ] Termin mit Esma am Fr 27.11.2026 (ca. 10 Min.): Bing Places mit **Esmas** Google-Konto anmelden und aus dem Google-Profil importieren, dazu local.ch (Code geht an Esmas Nummer)
 - [ ] search.ch und Ofri prüfen
 
 ## Bewertungen
