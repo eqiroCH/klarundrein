@@ -47,11 +47,11 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [x] Öffnungszeiten: Mo–Fr 07:30–18:00 (aus dem Google-Profil, `company.hours`, Schema)
 - [x] Umfang der neuen Leistungen mit Esma geklärt (25.11.2026): Winterdienst raus, Lichtschachtreinigung rein
 - [x] Maler/Renovation: bieten sie nur nebenbei an, keine eigene Seite – Fokus auf Reinigung (Esma, 25.11.2026)
-- [x] Winterdienst/Schneeräumen entfernt (Esma, 25.11.2026), dafür Lichtschachtreinigung bei der Hauswartung. **Im Google-Profil steht bei «Hauswartungsservice» noch «Winterdienst» → beim nächsten Google-Check ändern**
+- [x] Winterdienst/Schneeräumen entfernt (Esma, 25.11.2026), dafür Lichtschachtreinigung bei der Hauswartung. Im Google-Profil bei «Hauswartungsservice» am 27.11.2026 ebenfalls angepasst
 - [ ] Echte Google-Bewertungen einbinden, sobald vorhanden. Die Vorlagen-Bewertungen der alten Seite («Lisa B.», «Sarah R.») wurden bewusst nicht übernommen, an ihrer Stelle steht der Bereich «Darauf können Sie sich verlassen»
 - [x] Google-Unternehmensprofil: von Esma erstellt und verifiziert, Lion ist Administrator
 - [x] Google-Profil optimiert (24.11.2026): Kategorien, 10 Leistungen mit Beschreibung, Beschreibung, Einzugsgebiet, Öffnungszeiten, Instagram, WhatsApp
-- [x] Antworten auf alle 5 Google-Bewertungen gepostet (24.11.2026)
+- [x] Antworten auf alle Google-Bewertungen gepostet (5 am 24.11., Hassan Kinani am 27.11.2026; Stefan Beyeler hat Esma selbst beantwortet). Stand 27.11.: 7 Bewertungen, 5,0
 - [x] Google-Profil: Logo ersetzt (`design/google/logo-google.png`, das alte war abgeschnitten) und Titelbild durch echtes Foto ersetzt (`design/google/titelbild-google.jpg`)
 - [x] Cylex: Korrektur eingereicht (24.11.2026, Rückfragen an info@klarundrein.ch), falsche Nummer 052 707 25 62 entfernen. Cylex hat sie aus dem Unsplash-Dateinamen der alten Seite gelesen (`photo-1760527072562`). Korrektur über «Fehlerhafte Daten melden»
 - [x] Bing Places (27.11.2026): von Esma mit ihrem Google-Konto aus Google importiert, Überprüfung abgeschlossen, «mit Google synchronisiert», Veröffentlichung in 7–12 Tagen. E-Mail-Feld noch leer
