@@ -54,7 +54,7 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [x] Antworten auf alle 5 Google-Bewertungen gepostet (24.11.2026)
 - [x] Google-Profil: Logo ersetzt (`design/google/logo-google.png`, das alte war abgeschnitten) und Titelbild durch echtes Foto ersetzt (`design/google/titelbild-google.jpg`)
 - [x] Cylex: Korrektur eingereicht (24.11.2026, Rückfragen an info@klarundrein.ch), falsche Nummer 052 707 25 62 entfernen. Cylex hat sie aus dem Unsplash-Dateinamen der alten Seite gelesen (`photo-1760527072562`). Korrektur über «Fehlerhafte Daten melden»
-- [ ] Termin mit Esma am Fr 27.11.2026 (ca. 10 Min.): Bing Places mit **Esmas** Google-Konto anmelden und aus dem Google-Profil importieren, dazu local.ch (Code geht an Esmas Nummer)
+- [ ] Termin mit Esma am Fr 27.11.2026, 14:00 (ca. 10 Min.): Bing Places mit **Esmas** Google-Konto anmelden und aus dem Google-Profil importieren. local.ch: Eintrag existiert schon, «nicht beansprucht» – über «Beanspruchen» Kontaktformular ausfüllen, Swisscom Directories prüft danach per Telefon/E-Mail (kein Sofort-Code). Achtung: dabei werden oft kostenpflichtige Pakete angeboten, Gratis-Eintrag reicht
 - [ ] search.ch und Ofri prüfen
 
 ## Bewertungen
