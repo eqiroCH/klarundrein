@@ -56,7 +56,8 @@ Alle Inhalte (Firmendaten, Leistungen, FAQ, Einzugsgebiet) stehen zentral in `sr
 - [x] Cylex: Korrektur eingereicht (24.11.2026, Rückfragen an info@klarundrein.ch), falsche Nummer 052 707 25 62 entfernen. Cylex hat sie aus dem Unsplash-Dateinamen der alten Seite gelesen (`photo-1760527072562`). Korrektur über «Fehlerhafte Daten melden»
 - [x] Bing Places (27.11.2026): von Esma mit ihrem Google-Konto aus Google importiert, Überprüfung abgeschlossen, «mit Google synchronisiert», Veröffentlichung in 7–12 Tagen. E-Mail-Feld noch leer
 - [ ] local.ch: Eintrag existiert, «nicht beansprucht». Beanspruchen braucht ein **localsearch-Konto** (Formular leitet auf auth.local.ch weiter) → Esma macht es selbst mit ihrem Login (Vorname Esma, Nachname Haxhaj, +41765611779, info@klarundrein.ch, Änderungstext). Danach prüft Swisscom Directories per Telefon/E-Mail; Werbepaket ablehnen
-- [ ] search.ch und Ofri prüfen
+- [x] search.ch geprüft (27.11.2026): Daten korrekt, Quelle ist derselbe localsearch-Eintrag wie local.ch (place_id 3Pvuz-cyWxCLm9mwH6Euhw) → wird über local.ch/my.localsearch.ch mitverwaltet. Kurztext sagt «Abgabegarantie» ohne «auf Wunsch»
+- [x] Ofri geprüft (27.11.2026): eigenes Profil von Esma/Arxhend (Maler, Reinigungsfirma, Tapezierer; 2 Bewertungen 5 Sterne), Daten korrekt. Optional für Esma: «Abnahmegarantie auf Wunsch», fehlende Leistungen (Hochdruck, Fassade, Hauswartung, Bau, Lichtschacht) ergänzen
 
 ## Bewertungen
 
